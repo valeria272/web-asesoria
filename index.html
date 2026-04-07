@@ -1920,7 +1920,7 @@ function closeExit() {
   p.classList.remove('active');
   p.setAttribute('aria-hidden', 'true');
 }
-popup-form').addEventListener('submit', async (e) => {
+document.getElementById('popup-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const inp = document.getElementById('popup-email');
   if (!inp.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value)) {
