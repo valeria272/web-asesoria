@@ -1937,18 +1937,10 @@ popup-form').addEventListener('submit', async (e) => {
       empresa: '—', telefono: '—', inversion: '—', situacion: '—', mensaje: 'Lead desde popup checklist'
     });
   } catch(err) { console.error('EmailJS popup error:', err); }
-  document.querySelector('.popup-card').innerHTML = `
-    document.querySelector('.popup-card').innerHTML = `
-    <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px;line-height:1.2">Checklist en camino!</h3>
-    <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escribenos a contacto@copywriters.cl</p>
-  `;
-
-    <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escríbenos a contacto@copywriters.cl</p>
-  `;
-  setTimeout(closeExit, 3000);
+   document.querySelector('.popup-card').innerHTML = '<h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px">Checklist en camino!</h3><p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega escribenos a contacto@copywriters.cl</p>';
+  setTimeout(closeExit, 4000);
 });
 
-});
 </script>
 </body>
 </html>
