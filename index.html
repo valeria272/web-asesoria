@@ -1744,10 +1744,10 @@ footer {
 
 <script>
 // ─── EmailJS ───
-(function(){ emailjs.init({ publicKey: "TU_PUBLIC_KEY_AQUI" }); })();
-const EMAILJS_SERVICE_ID    = "TU_SERVICE_ID_AQUI";
-const EMAILJS_TEMPLATE_USER = "TU_TEMPLATE_USUARIO_AQUI";
-const EMAILJS_TEMPLATE_TEAM = "TU_TEMPLATE_EQUIPO_AQUI";
+(function(){ emailjs.init({ publicKey: "46Wj5o5rVqgZqS7tM" }); })();
+const EMAILJS_SERVICE_ID    = "service_idi0z8x";
+const EMAILJS_TEMPLATE_USER = "template_oubd425";
+const EMAILJS_TEMPLATE_TEAM = "template_q8bzwjp";
 
 // ─── Intersection Observer ───
 const io = new IntersectionObserver((entries) => {
@@ -1883,7 +1883,7 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, { to_name: params.nombre, to_email: params.email });
+   await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, params);
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_TEAM, params);
     if (typeof gtag !== 'undefined') gtag('event', 'generate_lead', { event_category: 'diagnostico_digital', event_label: 'formulario_contacto' });
     if (typeof fbq !== 'undefined') fbq('track', 'Lead');
