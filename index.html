@@ -1920,19 +1920,30 @@ function closeExit() {
   p.classList.remove('active');
   p.setAttribute('aria-hidden', 'true');
 }
-
-document.getElementById('popup-form').addEventListener('submit', (e) => {
+popup-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const inp = document.getElementById('popup-email');
   if (!inp.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value)) {
     inp.style.borderColor = 'var(--error)';
     return;
   }
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, {
+      nombre: 'allí',
+      email: inp.value.trim(),
+      empresa: '—', telefono: '—', inversion: '—', situacion: '—', mensaje: 'Lead desde popup checklist'
+    });
+  } catch(err) { console.error('EmailJS popup error:', err); }
   document.querySelector('.popup-card').innerHTML = `
     <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px;line-height:1.2">¡Checklist en camino!</h3>
     <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escríbenos a contacto@copywriters.cl</p>
   `;
-  setTimeout(closeExit, 4000);
+  setTimeout(closeExit, 3000);
+});
+
 });
 </script>
 </body>
