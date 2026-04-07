@@ -1938,7 +1938,11 @@ popup-form').addEventListener('submit', async (e) => {
     });
   } catch(err) { console.error('EmailJS popup error:', err); }
   document.querySelector('.popup-card').innerHTML = `
-    <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px;line-height:1.2">¡Checklist en camino!</h3>
+    document.querySelector('.popup-card').innerHTML = `
+    <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px;line-height:1.2">Checklist en camino!</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escribenos a contacto@copywriters.cl</p>
+  `;
+
     <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escríbenos a contacto@copywriters.cl</p>
   `;
   setTimeout(closeExit, 3000);
