@@ -1791,7 +1791,10 @@ window.hsConversationsOnReady = window.hsConversationsOnReady || [];
 window.hsConversationsOnReady.push(function() {
   window.HubSpotConversations.on('conversationStarted', function() {
     if (typeof fbq !== 'undefined') fbq('track', 'Contact');
-    if (typeof gtag !== 'undefined') gtag('event', 'contact', { method: 'hubspot_chat' });
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'contact', { method: 'hubspot_chat' });
+      gtag('event', 'conversion', { send_to: 'AW-718076958/4eiRCNji4pgcEJ74s9YC' });
+    }
   });
 });
 
@@ -1868,7 +1871,10 @@ form.addEventListener('submit', async (e) => {
   try {
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, params);
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_TEAM, params);
-    if (typeof gtag !== 'undefined') gtag('event', 'generate_lead', { event_category: 'asesoria_digital', event_label: 'formulario_contacto' });
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', { event_category: 'asesoria_digital', event_label: 'formulario_contacto' });
+      gtag('event', 'conversion', { send_to: 'AW-718076958/4eiRCNji4pgcEJ74s9YC' });
+    }
     if (typeof fbq !== 'undefined') fbq('track', 'Lead');
     form.style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
