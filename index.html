@@ -1,1 +1,1939 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asesor√≠a Digital para Pymes | Copywriters Chile</title>
+<meta name="description" content="Asesoramos tu ecosistema digital en 4 semanas: redes sociales, campa√±as de pauta, integraciones t√©cnicas y m√©tricas. Sabe si tu marketing digital est√° funcionando.">
+<meta property="og:title" content="Asesor√≠a Digital ‚Äî Copywriters">
+<meta property="og:description" content="Asesor√≠a completa de marketing digital para pymes chilenas. Plan de acci√≥n, informe ejecutivo y reuni√≥n de acompa√±amiento.">
+<meta property="og:image" content="https://copywriters.cl/og-diagnostico.jpg">
+<link rel="canonical" href="https://copywriters.cl/diagnostico-digital">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Meta Pixel (reemplazar 242693976884672 con el ID real) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '242693976884672');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=242693976884672&ev=PageView&noscript=1"/></noscript>
+
+<!-- Google Ads (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-718076958"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-718076958');
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:      #F8F6F1;
+  --white:      #FFFFFF;
+  --navy:       #0F2B4C;
+  --navy-light: #1a3d6b;
+  --lime:       #C8F135;
+  --lime-hover: #b8de25;
+  --text:       #1A1A1A;
+  --muted:      #666666;
+  --border:     #E8E4DC;
+  --shadow:     rgba(0,0,0,0.06);
+  --shadow-md:  rgba(0,0,0,0.10);
+  --success:    #2d7a3a;
+  --error:      #c0392b;
+  --warning:    #e67e22;
+  --font-serif: 'DM Serif Display', serif;
+  --font-sans:  'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ‚îÄ‚îÄ‚îÄ UTILITIES ‚îÄ‚îÄ‚îÄ */
+.container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+.fade-in       { opacity: 0; transform: translateY(28px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+.fade-in-left  { opacity: 0; transform: translateX(-28px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+.fade-in-right { opacity: 0; transform: translateX(28px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+.fade-in.visible, .fade-in-left.visible, .fade-in-right.visible { opacity: 1; transform: translate(0); }
+
+/* ‚îÄ‚îÄ‚îÄ HEADER / NAV ‚îÄ‚îÄ‚îÄ */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+header.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 2px 20px var(--shadow);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.nav-logo span { color: var(--navy); }
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-cta {
+  background: var(--lime);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.15s;
+  display: none;
+}
+.nav-cta:hover { background: var(--lime-hover); }
+.nav-cta:active { transform: scale(0.98); }
+@media (min-width: 768px) { .nav-cta { display: inline-block; } }
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 1024px) { .hamburger { display: none; } }
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 32px;
+  z-index: 99;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), opacity 0.3s;
+}
+.mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+.mobile-menu a {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+
+/* ‚îÄ‚îÄ‚îÄ STICKY CTA BAR ‚îÄ‚îÄ‚îÄ */
+#sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 90;
+  background: var(--navy);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+#sticky-bar.visible  { transform: translateY(0); }
+#sticky-bar.hidden-bar { transform: translateY(100%); }
+.sticky-label { font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+.sticky-label strong { color: #fff; font-weight: 600; }
+.sticky-btn {
+  background: var(--lime);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 11px 24px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.15s;
+}
+.sticky-btn:hover { background: var(--lime-hover); }
+.sticky-btn:active { transform: scale(0.98); }
+
+/* ‚îÄ‚îÄ‚îÄ HUBSPOT CHAT (reemplaza WhatsApp float) ‚îÄ‚îÄ‚îÄ */
+
+/* ‚îÄ‚îÄ‚îÄ SHARED SECTION STYLES ‚îÄ‚îÄ‚îÄ */
+section { padding: 100px 0; }
+@media (max-width: 767px) { section { padding: 64px 0; } }
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 16px;
+  background: rgba(15,43,76,0.07);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+.section-tag.on-dark { color: var(--lime); background: rgba(200,241,53,0.12); }
+
+.section-h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+.section-h2.on-dark { color: #fff; }
+
+.section-sub {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 520px;
+  line-height: 1.75;
+}
+.section-sub.on-dark { color: rgba(255,255,255,0.65); }
+
+/* Split-layout helper */
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .split { grid-template-columns: 1fr 1fr; gap: 80px; }
+  .split.reverse .split-text  { order: 2; }
+  .split.reverse .split-photo { order: 1; }
+}
+
+.split-photo img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 16px 48px var(--shadow-md);
+  display: block;
+}
+@media (max-width: 899px) { .split-photo img { height: 280px; } }
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: var(--lime);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.97rem;
+  padding: 15px 32px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.01em;
+}
+.btn-primary:hover { background: var(--lime-hover); }
+.btn-primary:active { transform: scale(0.98) translateY(1px); }
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 30px;
+  border: 1.5px solid var(--text);
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-outline:hover { background: var(--text); color: var(--white); }
+.btn-outline:active { transform: scale(0.98); }
+
+/* ‚îÄ‚îÄ‚îÄ HERO ‚îÄ‚îÄ‚îÄ */
+#hero {
+  min-height: 100dvh;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  padding-top: 72px;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 60px 0;
+}
+@media (min-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr 1fr; gap: 72px; }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(15,43,76,0.08);
+  border: 1px solid rgba(15,43,76,0.15);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.03em;
+  margin-bottom: 24px;
+}
+.hero-badge::before {
+  content: '';
+  width: 8px; height: 8px;
+  background: var(--navy);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+h1.hero-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+h1.hero-h1 em {
+  font-style: italic;
+  color: var(--navy);
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.btn-ghost {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+.btn-ghost:hover { color: var(--text); border-color: var(--text); }
+
+/* Hero photo + widget */
+.hero-photo-wrap {
+  position: relative;
+}
+.hero-photo-wrap img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 24px 64px var(--shadow-md);
+  display: block;
+}
+@media (max-width: 899px) { .hero-photo-wrap img { height: 260px; } }
+
+.hero-widget {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  padding: 22px 24px;
+  width: 260px;
+  border: 1px solid var(--border);
+}
+@media (max-width: 899px) {
+  .hero-widget { position: static; width: 100%; border-radius: 12px; margin-top: 16px; }
+}
+.widget-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.widget-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+.widget-row:last-of-type { border-bottom: none; }
+.widget-name { color: var(--muted); }
+.widget-val { font-weight: 600; font-size: 0.78rem; }
+.widget-val.bad  { color: #c0392b; }
+.widget-val.warn { color: var(--warning); }
+
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN PROBLEMA ‚îÄ‚îÄ‚îÄ */
+#problema { background: var(--cream); }
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 36px;
+}
+@media (max-width: 599px) { .pain-grid { grid-template-columns: 1fr; } }
+
+.pain-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.pain-card:hover { box-shadow: 0 8px 28px var(--shadow-md); transform: translateY(-2px); }
+.pain-icon-wrap {
+  width: 36px; height: 36px;
+  background: rgba(15,43,76,0.07);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+.pain-text {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
+}
+.pain-text::before { content: '"'; color: var(--navy); font-style: normal; font-weight: 700; }
+.pain-text::after  { content: '"'; color: var(--navy); font-style: normal; font-weight: 700; }
+
+.stat-callout {
+  margin-top: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.stat-callout strong { color: var(--text); font-weight: 600; }
+
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN SOLUCI√ìN ‚îÄ‚îÄ‚îÄ */
+#solucion { background: var(--white); }
+.timeline { display: flex; flex-direction: column; gap: 0; margin-top: 40px; }
+.tl-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+.tl-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.tl-num {
+  width: 40px; height: 40px;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.tl-line {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  margin: 6px 0;
+  min-height: 32px;
+}
+.tl-item:last-child .tl-line { display: none; }
+.tl-content {
+  padding-bottom: 36px;
+  flex: 1;
+}
+.tl-item:last-child .tl-content { padding-bottom: 0; }
+.tl-period {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.tl-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.tl-list { list-style: none; }
+.tl-list li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  padding: 4px 0;
+  padding-left: 16px;
+  position: relative;
+}
+.tl-list li::before { content: '‚Äî'; position: absolute; left: 0; color: var(--border); }
+
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN QU√â AUDITAMOS ‚îÄ‚îÄ‚îÄ */
+#auditamos { background: var(--cream); }
+.audit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 48px;
+}
+@media (max-width: 599px) { .audit-grid { grid-template-columns: 1fr; } }
+
+.audit-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 30px;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.audit-card:hover { box-shadow: 0 12px 36px var(--shadow-md); transform: translateY(-3px); }
+.audit-icon-wrap {
+  width: 48px; height: 48px;
+  background: rgba(15,43,76,0.07);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.audit-card-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.audit-list { list-style: none; }
+.audit-list li {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.audit-list li:last-child { border-bottom: none; }
+
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN PARA QUI√âN ‚îÄ‚îÄ‚îÄ */
+#para-quien { background: var(--white); }
+.for-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+@media (max-width: 699px) { .for-grid { grid-template-columns: 1fr; } }
+.for-col {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+.for-col.yes { border-top: 4px solid var(--lime); }
+.for-col.no  { border-top: 4px solid var(--border); }
+.for-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+.badge-yes {
+  background: rgba(45,122,58,0.1);
+  color: var(--success);
+  border: 1px solid rgba(45,122,58,0.25);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.badge-no {
+  background: rgba(192,57,43,0.08);
+  color: var(--error);
+  border: 1px solid rgba(192,57,43,0.2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.for-list { list-style: none; }
+.for-list li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.55;
+}
+.for-list li:last-child { border-bottom: none; }
+.for-col.yes .for-list li::before { content: '‚úì'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+.for-col.no  .for-list li::before { content: '‚úï'; position: absolute; left: 0; color: var(--error); font-weight: 700; }
+
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN ENTREGABLES (OSCURA) ‚îÄ‚îÄ‚îÄ */
+#entregables {
+  background: var(--navy);
+  color: #fff;
+}
+.entregables-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  align-items: center;
+}
+@media (min-width: 900px) { .entregables-inner { grid-template-columns: 1fr 1fr; } }
+
+.del-list { list-style: none; margin-top: 40px; }
+.del-item {
+  display: flex;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.del-item:last-child { border-bottom: none; }
+.del-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(200,241,53,0.3);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 32px;
+  font-variant-numeric: tabular-nums;
+}
+.del-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.del-desc { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+.entregables-photo-wrap { position: relative; }
+.entregables-photo-wrap img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+  display: block;
+}
+@media (max-width: 899px) { .entregables-photo-wrap img { height: 260px; } }
+.entregables-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15,43,76,0.4);
+  border-radius: 16px;
+}
+
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN PRECIO ‚îÄ‚îÄ‚îÄ */
+#precio {
+  background: var(--cream);
+  text-align: center;
+}
+.price-header { max-width: 600px; margin: 0 auto 48px; }
+.price-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 48px 48px 40px;
+  max-width: 520px;
+  margin: 0 auto;
+  box-shadow: 0 8px 40px var(--shadow-md);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--lime);
+}
+.price-launch {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+  background: rgba(15,43,76,0.07);
+  padding: 5px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.price-name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+#cupos-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--error);
+  background: rgba(192,57,43,0.07);
+  border: 1px solid rgba(192,57,43,0.18);
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin-bottom: 22px;
+  width: fit-content;
+}
+.price-amount {
+  font-family: var(--font-sans);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.price-amount sup { font-size: 1.2rem; vertical-align: super; }
+.price-amount sub { font-size: 1rem; font-weight: 500; color: var(--muted); }
+.price-original {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-bottom: 28px;
+}
+.price-divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+.price-includes { list-style: none; margin-bottom: 32px; }
+.price-includes li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.5;
+}
+.price-includes li:last-child { border-bottom: none; }
+.price-includes li::before { content: '‚úì'; position: absolute; left: 0; color: var(--success); font-weight: 700; font-size: 0.9rem; }
+.price-cta {
+  display: block;
+  width: 100%;
+  background: var(--lime);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 17px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+}
+.price-cta:hover { background: var(--lime-hover); }
+.price-cta:active { transform: scale(0.99); }
+.price-trust {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.65;
+}
+
+/* ‚îÄ‚îÄ‚îÄ FAQ ‚îÄ‚îÄ‚îÄ */
+#faq { background: var(--white); }
+.faq-wrap { max-width: 760px; margin-top: 48px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--navy); }
+.faq-q.open { color: var(--navy); }
+.faq-icon {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, transform 0.3s;
+}
+.faq-q.open .faq-icon { background: var(--navy); transform: rotate(45deg); }
+.faq-icon svg { transition: stroke 0.2s; }
+.faq-q.open .faq-icon svg { stroke: #fff; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1); }
+.faq-answer p { padding: 0 0 22px; color: var(--muted); font-size: 0.92rem; line-height: 1.75; max-width: 680px; }
+
+/* ‚îÄ‚îÄ‚îÄ TESTIMONIOS ‚îÄ‚îÄ‚îÄ */
+#testimonios { background: var(--cream); }
+.testi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 48px;
+}
+@media (min-width: 768px)  { .testi-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .testi-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+.testi-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.testi-card:hover { box-shadow: 0 12px 36px var(--shadow-md); transform: translateY(-3px); }
+.testi-quote {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  position: relative;
+  padding-top: 18px;
+}
+.testi-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -14px; left: -4px;
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: rgba(15,43,76,0.12);
+  line-height: 1;
+}
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+}
+.testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testi-name { font-weight: 700; font-size: 0.88rem; line-height: 1.3; }
+.testi-role { font-size: 0.78rem; color: var(--muted); }
+
+/* ‚îÄ‚îÄ‚îÄ FORMULARIO ‚îÄ‚îÄ‚îÄ */
+#formulario { background: var(--cream); }
+.form-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (min-width: 960px) { .form-layout { grid-template-columns: 1fr 480px; } }
+
+.form-info .section-h2 { margin-bottom: 12px; }
+.form-info > p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 36px; }
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.contact-row a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.contact-row a:hover { color: var(--navy); }
+.contact-icon-wrap {
+  width: 36px; height: 36px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 40px var(--shadow);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: 12px 16px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #aaa; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(15,43,76,0.08); }
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error { border-color: var(--error); }
+.form-err { font-size: 0.77rem; color: var(--error); display: none; }
+.form-err.visible { display: block; }
+.form-group textarea { resize: vertical; min-height: 96px; }
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  background: var(--lime);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
+}
+.form-submit-btn:hover { background: var(--lime-hover); }
+.form-submit-btn:active { transform: scale(0.99); }
+.form-submit-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.form-privacy { font-size: 0.77rem; color: #aaa; margin-top: 12px; text-align: center; }
+
+#form-success { display: none; text-align: center; padding: 32px 16px; }
+.success-icon-wrap {
+  width: 64px; height: 64px;
+  background: rgba(45,122,58,0.1);
+  border: 1px solid rgba(45,122,58,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+#form-success h3 { font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 10px; }
+#form-success p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+
+/* ‚îÄ‚îÄ‚îÄ FOOTER ‚îÄ‚îÄ‚îÄ */
+footer {
+  background: #1A1A1A;
+  color: rgba(255,255,255,0.55);
+  padding: 56px 0 36px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media (min-width: 768px) { .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+.footer-logo {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+.footer-logo span { color: rgba(200,241,53,0.9); }
+.footer-brand p { font-size: 0.82rem; max-width: 240px; line-height: 1.65; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(255,255,255,0.9); }
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+@media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+.footer-bottom p { font-size: 0.78rem; }
+
+/* ‚îÄ‚îÄ‚îÄ EXIT POPUP ‚îÄ‚îÄ‚îÄ */
+#exit-popup {
+  position: fixed; inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+#exit-popup.active { opacity: 1; pointer-events: all; }
+.popup-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 48px 40px;
+  max-width: 460px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.15);
+  border-top: 4px solid var(--lime);
+}
+.popup-close {
+  position: absolute; top: 16px; right: 16px;
+  background: var(--cream); border: none; cursor: pointer;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted);
+  transition: background 0.2s;
+}
+.popup-close:hover { background: var(--border); }
+.popup-card h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 10px; line-height: 1.2; }
+.popup-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; line-height: 1.65; }
+.popup-form { display: flex; gap: 0; border-radius: 8px; overflow: hidden; border: 1.5px solid var(--border); }
+.popup-form input {
+  flex: 1; background: none; border: none; color: var(--text);
+  font-family: var(--font-sans); font-size: 0.9rem; padding: 13px 16px; outline: none;
+}
+.popup-form input::placeholder { color: #aaa; }
+.popup-form button {
+  background: var(--lime); color: var(--text); font-weight: 700; font-size: 0.85rem;
+  padding: 13px 18px; border: none; cursor: pointer; white-space: nowrap;
+  transition: background 0.2s;
+}
+.popup-form button:hover { background: var(--lime-hover); }
+</style>
+</head>
+<body>
+
+<!-- ‚îÄ‚îÄ‚îÄ STICKY BAR ‚îÄ‚îÄ‚îÄ -->
+<div id="sticky-bar" role="complementary" aria-label="Barra de acceso r√°pido">
+  <div class="sticky-label">
+    <strong>Asesor√≠a Digital</strong> &mdash; $590.000 CLP + IVA
+  </div>
+  <a href="#formulario" class="sticky-btn" aria-label="Ir al formulario">Quiero mi cupo &rarr;</a>
+</div>
+
+<!-- ‚îÄ‚îÄ‚îÄ HUBSPOT CHAT BOT ‚îÄ‚îÄ‚îÄ -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7396872.js"></script>
+
+<!-- ‚îÄ‚îÄ‚îÄ HEADER ‚îÄ‚îÄ‚îÄ -->
+<header id="main-nav" role="navigation" aria-label="Navegaci√≥n principal">
+  <div class="container nav-inner">
+    <a href="https://copywriters.cl" class="nav-logo" aria-label="Ir a Copywriters.cl">
+      Copy<span>writers</span>.cl
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#problema">El problema</a></li>
+      <li><a href="#solucion">La soluci√≥n</a></li>
+      <li><a href="#precio">Precio</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#formulario" class="nav-cta" aria-label="Solicitar asesor√≠a">Solicitar Asesor√≠a</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir men√∫" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Men√∫ m√≥vil">
+  <a href="#problema" class="mobile-link">El problema</a>
+  <a href="#solucion" class="mobile-link">La soluci√≥n</a>
+  <a href="#auditamos" class="mobile-link">Qu√© revisamos</a>
+  <a href="#precio" class="mobile-link">Precio</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
+  <a href="#formulario" class="mobile-link">Solicitar Asesor√≠a</a>
+</nav>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 1 ‚Äî HERO
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="hero" aria-labelledby="hero-h1">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-badge fade-in" style="transition-delay:.1s">
+          Servicio para empresas chilenas
+        </div>
+        <h1 id="hero-h1" class="hero-h1 fade-in" style="transition-delay:.2s">
+          ¬øEst√°s pagando por marketing digital<br>
+          <em>sin saber si realmente funciona?</em>
+        </h1>
+        <p class="hero-sub fade-in" style="transition-delay:.3s">
+          Revisamos todo tu ecosistema digital ‚Äîredes, campa√±as, integraciones y m√©tricas‚Äî
+          y te entregamos un plan claro para que tu empresa opere con informaci√≥n real.
+        </p>
+        <div class="hero-actions fade-in" style="transition-delay:.4s">
+          <a href="#formulario" class="btn-primary" id="hero-cta">Quiero mi Asesor√≠a Digital &rarr;</a>
+          <a href="#solucion" class="btn-ghost" aria-label="Ver qu√© incluye el servicio">Ver qu√© incluye &darr;</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap fade-in-right" style="transition-delay:.3s">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
+             alt="Oficina moderna con equipo trabajando" loading="eager">
+        <div class="hero-widget" aria-hidden="true">
+          <p class="widget-label">Estado actual del ecosistema</p>
+          <div class="widget-row"><span class="widget-name">Meta Pixel</span><span class="widget-val bad">Sin verificar</span></div>
+          <div class="widget-row"><span class="widget-name">Google Analytics 4</span><span class="widget-val warn">Parcial</span></div>
+          <div class="widget-row"><span class="widget-name">CRM &harr; Ads</span><span class="widget-val bad">Desconectado</span></div>
+          <div class="widget-row"><span class="widget-name">Costo por lead</span><span class="widget-val bad">Desconocido</span></div>
+          <div class="widget-row"><span class="widget-name">Informes direcci√≥n</span><span class="widget-val bad">Inexistentes</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 2 ‚Äî PROBLEMA
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="problema" aria-labelledby="problema-h2">
+  <div class="container">
+    <div class="split">
+
+      <div class="split-photo fade-in-left">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+             alt="Dashboard de analytics con datos confusos" loading="lazy">
+      </div>
+
+      <div class="split-text fade-in-right">
+        <span class="section-tag">El problema</span>
+        <h2 id="problema-h2" class="section-h2">Si reconoces alguna de estas situaciones, este servicio es para ti</h2>
+        <div class="pain-grid" role="list">
+          <div class="pain-card" role="listitem">
+            <div class="pain-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <p class="pain-text">Pago marketing todos los meses pero no veo retorno claro</p>
+          </div>
+          <div class="pain-card" role="listitem">
+            <div class="pain-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <p class="pain-text">Tenemos m√©tricas, pero nadie las entiende ni las usa</p>
+          </div>
+          <div class="pain-card" role="listitem">
+            <div class="pain-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <p class="pain-text">El Pixel de Meta nunca se configur√≥ bien</p>
+          </div>
+          <div class="pain-card" role="listitem">
+            <div class="pain-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <p class="pain-text">No s√© si mis campa√±as de Google Ads est√°n bien segmentadas</p>
+          </div>
+          <div class="pain-card" role="listitem">
+            <div class="pain-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <p class="pain-text">Nuestro CRM no habla con nuestros anuncios</p>
+          </div>
+          <div class="pain-card" role="listitem">
+            <div class="pain-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg>
+            </div>
+            <p class="pain-text">Cambiamos de agencia y quedamos sin historial ni accesos</p>
+          </div>
+        </div>
+        <div class="stat-callout fade-in">
+          <strong>No est√°s solo.</strong> El 74% de las pymes chilenas no tienen sus integraciones digitales conectadas correctamente. Y pagan por eso todos los meses sin saberlo.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 3 ‚Äî SOLUCI√ìN
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="solucion" aria-labelledby="solucion-h2">
+  <div class="container">
+    <div class="split reverse">
+
+      <div class="split-text fade-in-left">
+        <span class="section-tag">La soluci√≥n</span>
+        <h2 id="solucion-h2" class="section-h2">La Asesor√≠a Digital de Copywriters</h2>
+        <p class="section-sub">4 semanas. Un equipo experto. Un mapa completo de tu ecosistema digital.</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-num">01</div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <p class="tl-period">Semana 1</p>
+              <h3 class="tl-title">Acceso y levantamiento</h3>
+              <ul class="tl-list">
+                <li>Acceso seguro a tus cuentas (solo lectura)</li>
+                <li>Formulario de onboarding con contexto de tu negocio</li>
+                <li>Revisi√≥n de redes, ads, analytics, pixel y CRM</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-num">02</div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <p class="tl-period">Semana 2‚Äì3</p>
+              <h3 class="tl-title">Asesor√≠a profunda</h3>
+              <ul class="tl-list">
+                <li>An√°lisis de performance de los √∫ltimos 90 d√≠as</li>
+                <li>Revisi√≥n de campa√±as activas y pausadas</li>
+                <li>Diagn√≥stico t√©cnico de integraciones</li>
+                <li>Identificaci√≥n de fugas de leads y errores de tracking</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-num">03</div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <p class="tl-period">Semana 4</p>
+              <h3 class="tl-title">Informe y entrega</h3>
+              <ul class="tl-list">
+                <li>Documento ejecutivo con asesor√≠a completa</li>
+                <li>Mapa visual de tu ecosistema digital</li>
+                <li>Plan de acci√≥n priorizado</li>
+                <li>Reuni√≥n de 60 minutos con el equipo</li>
+                <li>30 d√≠as de soporte post-entrega</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-photo fade-in-right">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
+             alt="Reuni√≥n de equipo analizando estrategia de marketing" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 4 ‚Äî QU√â AUDITAMOS
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="auditamos" aria-labelledby="auditamos-h2">
+  <div class="container">
+    <div style="text-align:center; max-width:600px; margin:0 auto 0">
+      <span class="section-tag fade-in">El alcance</span>
+      <h2 id="auditamos-h2" class="section-h2 fade-in">¬øQu√© revisamos exactamente?</h2>
+      <p class="section-sub fade-in" style="margin: 0 auto 0; max-width:480px">Cada punto de tu ecosistema digital, sin excepciones.</p>
+    </div>
+    <div class="audit-grid">
+      <div class="audit-card fade-in" style="transition-delay:.05s">
+        <div class="audit-icon-wrap" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3 class="audit-card-title">Redes Sociales</h3>
+        <ul class="audit-list">
+          <li>Instagram, Facebook, TikTok, LinkedIn</li>
+          <li>Frecuencia, engagement y alcance</li>
+          <li>Tipos de contenido y formatos</li>
+          <li>Benchmarks del sector</li>
+        </ul>
+      </div>
+      <div class="audit-card fade-in" style="transition-delay:.1s">
+        <div class="audit-icon-wrap" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 class="audit-card-title">Campa√±as de Pauta</h3>
+        <ul class="audit-list">
+          <li>Meta Ads: estructura, segmentaci√≥n, creativos</li>
+          <li>Google Ads: keywords, quality score, extensiones</li>
+          <li>Revisi√≥n de presupuestos y distribuci√≥n</li>
+          <li>Atribuci√≥n de conversiones</li>
+        </ul>
+      </div>
+      <div class="audit-card fade-in" style="transition-delay:.15s">
+        <div class="audit-icon-wrap" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 1 21 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2"/></svg>
+        </div>
+        <h3 class="audit-card-title">Integraciones T√©cnicas</h3>
+        <ul class="audit-list">
+          <li>Meta Pixel y Conversions API</li>
+          <li>Google Analytics 4 y GTM</li>
+          <li>CRM (HubSpot, Salesforce, Zoho)</li>
+          <li>WhatsApp Business API</li>
+        </ul>
+      </div>
+      <div class="audit-card fade-in" style="transition-delay:.2s">
+        <div class="audit-icon-wrap" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3 class="audit-card-title">M√©tricas y KPIs</h3>
+        <ul class="audit-list">
+          <li>¬øEst√°n midiendo lo correcto?</li>
+          <li>¬øLos dashboards son √∫tiles?</li>
+          <li>Embudos TOFU / MOFU / BOFU</li>
+          <li>Costo real por lead o venta</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 5 ‚Äî PARA QUI√âN
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="para-quien" aria-labelledby="para-quien-h2">
+  <div class="container">
+    <span class="section-tag fade-in">Fit del servicio</span>
+    <h2 id="para-quien-h2" class="section-h2 fade-in">¬øEs para tu empresa?</h2>
+    <div class="for-grid">
+      <div class="for-col yes fade-in-left">
+        <p class="for-label"><span class="badge-yes">S√ç</span>Es para ti si...</p>
+        <ul class="for-list">
+          <li>Llevas m√°s de 6 meses haciendo marketing digital</li>
+          <li>Tienes presupuesto mensual en pauta (+$300.000 CLP)</li>
+          <li>Tienes redes activas pero los resultados no son claros</li>
+          <li>Quieres ordenarte antes de escalar o cambiar de agencia</li>
+          <li>Eres gerente o due√±o y necesitas entender qu√© est√° pasando</li>
+        </ul>
+      </div>
+      <div class="for-col no fade-in-right">
+        <p class="for-label"><span class="badge-no">NO</span>No es para ti si...</p>
+        <ul class="for-list">
+          <li>Reci√©n est√°s partiendo y a√∫n no tienes presencia digital</li>
+          <li>No tienes acceso a tus cuentas publicitarias o redes</li>
+          <li>Buscas alguien que opere tu marketing (para eso tenemos otros servicios)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 6 ‚Äî ENTREGABLES (secci√≥n oscura)
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="entregables" aria-labelledby="entregables-h2">
+  <div class="container">
+    <div class="entregables-inner">
+      <div class="fade-in-left">
+        <span class="section-tag on-dark">Lo que recibes</span>
+        <h2 id="entregables-h2" class="section-h2 on-dark">Al final de las 4 semanas, tienes en tus manos:</h2>
+        <ul class="del-list">
+          <li class="del-item">
+            <span class="del-num">01</span>
+            <div><p class="del-title">Informe Ejecutivo</p><p class="del-desc">1‚Äì2 p√°ginas con el resumen de la asesor√≠a para directivos. Sin jerga t√©cnica.</p></div>
+          </li>
+          <li class="del-item">
+            <span class="del-num">02</span>
+            <div><p class="del-title">Informe T√©cnico</p><p class="del-desc">Detalle completo por √°rea: redes, pauta, integraciones y m√©tricas.</p></div>
+          </li>
+          <li class="del-item">
+            <span class="del-num">03</span>
+            <div><p class="del-title">Mapa del Ecosistema Digital</p><p class="del-desc">Visual de c√≥mo est√°n conectadas (o desconectadas) tus herramientas.</p></div>
+          </li>
+          <li class="del-item">
+            <span class="del-num">04</span>
+            <div><p class="del-title">Plan de Acci√≥n Priorizado</p><p class="del-desc">Quick wins en 2 semanas + mejoras estructurales a 3 meses.</p></div>
+          </li>
+          <li class="del-item">
+            <span class="del-num">05</span>
+            <div><p class="del-title">Reuni√≥n de Acompa√±amiento</p><p class="del-desc">60 minutos con el equipo de Copywriters para revisar todo en vivo.</p></div>
+          </li>
+          <li class="del-item">
+            <span class="del-num">06</span>
+            <div><p class="del-title">Canal de Soporte</p><p class="del-desc">30 d√≠as post-entrega por WhatsApp o Slack para consultas.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="entregables-photo-wrap fade-in-right">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+             alt="Profesional revisando informe de datos en pantalla" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 7 ‚Äî PRECIO
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="precio" aria-labelledby="precio-h2">
+  <div class="container">
+    <div class="price-header fade-in">
+      <span class="section-tag">La inversi√≥n</span>
+      <h2 id="precio-h2" class="section-h2">Invierte una vez, entiende para siempre c√≥mo funciona tu ecosistema digital</h2>
+    </div>
+    <div class="price-card fade-in">
+      <span class="price-launch">Precio de lanzamiento</span>
+      <h3 class="price-name">Asesor√≠a Digital</h3>
+      <div id="cupos-badge" role="status" aria-live="polite">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Solo 3 cupos disponibles este mes
+      </div>
+      <p class="price-amount"><sup>$</sup>590.000 <sub>CLP + IVA</sub></p>
+      <p class="price-original">Precio normal: $890.000 CLP</p>
+      <hr class="price-divider">
+      <ul class="price-includes" aria-label="Qu√© incluye el servicio">
+        <li>Asesor√≠a completa de 4 semanas</li>
+        <li>Informe ejecutivo + t√©cnico</li>
+        <li>Mapa del ecosistema digital</li>
+        <li>Plan de acci√≥n priorizado</li>
+        <li>1 reuni√≥n de acompa√±amiento (60 min)</li>
+        <li>30 d√≠as de soporte post-entrega</li>
+      </ul>
+      <a href="#formulario" class="price-cta" id="price-cta" aria-label="Solicitar Asesor√≠a Digital">
+        Quiero mi Asesor√≠a Digital &rarr;
+      </a>
+      <p class="price-trust">Sin contrato de permanencia. Sin letra chica.<br>Comienzas cuando quieras.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 8 ‚Äî FAQ
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="faq" aria-labelledby="faq-h2">
+  <div class="container">
+    <span class="section-tag fade-in">Preguntas frecuentes</span>
+    <h2 id="faq-h2" class="section-h2 fade-in">Todo lo que necesitas saber</h2>
+    <div class="faq-wrap fade-in" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-1">
+          ¬øNecesito darles acceso a mis redes y cuentas de pauta?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" id="faq-1"><p>S√≠. Para hacer una asesor√≠a honesta necesitamos acceso de solo lectura a tus cuentas de Meta Business, Google Ads, Analytics y dem√°s. Te enviamos una gu√≠a paso a paso para hacerlo de forma segura.</p></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-2">
+          ¬øPueden seguir gestionando mis redes mientras hacen la asesor√≠a?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" id="faq-2"><p>La Asesor√≠a Digital es un servicio separado de la gesti√≥n de redes. Si quieres contratar gesti√≥n adem√°s, podemos conversarlo aparte.</p></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-3">
+          ¬øEn cu√°nto tiempo tengo resultados?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" id="faq-3"><p>El informe completo lo recibes al final de las 4 semanas. Pero desde la semana 2 ya tienes los primeros hallazgos y quick wins para implementar.</p></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-4">
+          ¬øQu√© pasa si mi empresa es peque√±a y no tiene muchas cuentas?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" id="faq-4"><p>No importa el tama√±o. Revisamos lo que tienes. A veces una empresa peque√±a tiene m√°s problemas que una grande justamente por no tener a alguien que revise sus herramientas.</p></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-5">
+          ¬øEsto me sirve si ya tengo una agencia contratada?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" id="faq-5"><p>Perfecto escenario para hacer la asesor√≠a. Muchos clientes nos contratan para evaluar si su agencia actual les est√° entregando valor real.</p></div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-6">
+          ¬øPuedo contratar gesti√≥n de marketing con Copywriters despu√©s de la asesor√≠a?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" id="faq-6"><p>S√≠. De hecho, varios clientes de la Asesor√≠a Digital terminan contratando alguno de nuestros servicios de gesti√≥n porque el informe les deja claro qu√© necesitan.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 9 ‚Äî TESTIMONIOS
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="testimonios" aria-labelledby="testimonios-h2">
+  <div class="container">
+    <span class="section-tag fade-in">Prueba social</span>
+    <h2 id="testimonios-h2" class="section-h2 fade-in">Lo que dicen empresas que ya pasaron por la asesor√≠a</h2>
+    <div class="testi-grid">
+      <div class="testi-card fade-in" style="transition-delay:.05s">
+        <p class="testi-quote">Llev√°bamos dos a√±os pagando Meta Ads y nunca supimos cu√°nto nos costaba un lead real. La asesor√≠a revel√≥ que est√°bamos gastando el 60% del presupuesto en una audiencia equivocada.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://picsum.photos/seed/valeria-fuentes/88/88" alt="Foto de Valeria Fuentes" loading="lazy"></div>
+          <div><p class="testi-name">Valeria Fuentes</p><p class="testi-role">Gerente Comercial, Cl√≠nica Dental Providencia</p></div>
+        </div>
+      </div>
+      <div class="testi-card fade-in" style="transition-delay:.1s">
+        <p class="testi-quote">Pens√°bamos que Google Analytics estaba funcionando bien. Result√≥ que el 80% de las conversiones no se registraban. Hoy tenemos un dashboard que usamos en cada reuni√≥n de directorio.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://picsum.photos/seed/rodrigo-cisternas/88/88" alt="Foto de Rodrigo Cisternas" loading="lazy"></div>
+          <div><p class="testi-name">Rodrigo Cisternas</p><p class="testi-role">CEO, Constructora Norte Grande</p></div>
+        </div>
+      </div>
+      <div class="testi-card fade-in" style="transition-delay:.15s">
+        <p class="testi-quote">El informe fue la herramienta que us√© para cambiar de agencia con argumentos concretos. Sin la asesor√≠a habr√≠a seguido pagando por resultados que nadie pod√≠a explicar.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://picsum.photos/seed/andrea-molina/88/88" alt="Foto de Andrea Molina" loading="lazy"></div>
+          <div><p class="testi-name">Andrea Molina</p><p class="testi-role">Directora, Instituto de Idiomas Andino</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 10 ‚Äî FORMULARIO
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
+<section id="formulario" aria-labelledby="form-h2">
+  <div class="container">
+    <div class="form-layout">
+      <div class="form-info">
+        <span class="section-tag fade-in">Conversemos</span>
+        <h2 id="form-h2" class="section-h2 fade-in">¬øPartimos? Cu√©ntanos sobre tu empresa</h2>
+        <p class="fade-in">Te respondemos dentro de las pr√≥ximas 24 horas h√°biles.</p>
+        <div class="contact-row fade-in" style="transition-delay:.05s">
+          <div class="contact-icon-wrap" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          Del Inca 4622, Las Condes, Santiago
+        </div>
+        <div class="contact-row fade-in" style="transition-delay:.1s">
+          <div class="contact-icon-wrap" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 17.5z"/></svg>
+          </div>
+          <a href="tel:+56934303320">+569 34303320</a>
+        </div>
+        <div class="contact-row fade-in" style="transition-delay:.15s">
+          <div class="contact-icon-wrap" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <a href="mailto:contacto@copywriters.cl">contacto@copywriters.cl</a>
+        </div>
+      </div>
+
+      <div class="form-card fade-in-right">
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre">
+            <span class="form-err" id="nombre-error" role="alert">Este campo es obligatorio.</span>
+          </div>
+          <div class="form-group">
+            <label for="empresa">Nombre de la empresa <span aria-hidden="true">*</span></label>
+            <input type="text" id="empresa" name="empresa" required autocomplete="organization" placeholder="Tu empresa">
+            <span class="form-err" id="empresa-error" role="alert">Este campo es obligatorio.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email corporativo <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@empresa.cl">
+            <span class="form-err" id="email-error" role="alert">Ingresa un email v√°lido.</span>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Tel√©fono (WhatsApp) <span aria-hidden="true">*</span></label>
+            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="+56 9 XXXX XXXX">
+            <span class="form-err" id="telefono-error" role="alert">Este campo es obligatorio.</span>
+          </div>
+          <div class="form-group">
+            <label for="inversion">¬øCu√°nto llevan invirtiendo en marketing digital?</label>
+            <select id="inversion" name="inversion">
+              <option value="" disabled selected>Selecciona una opci√≥n</option>
+              <option value="menos-6-meses">Menos de 6 meses</option>
+              <option value="6-meses-1-a√±o">Entre 6 meses y 1 a√±o</option>
+              <option value="mas-1-a√±o">M√°s de 1 a√±o</option>
+              <option value="no-invirtiendo">No estamos invirtiendo todav√≠a</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="situacion">¬øTienen alguna agencia o equipo interno actualmente?</label>
+            <select id="situacion" name="situacion">
+              <option value="" disabled selected>Selecciona una opci√≥n</option>
+              <option value="agencia-externa">Agencia externa</option>
+              <option value="equipo-interno">Equipo interno</option>
+              <option value="ambos">Ambos</option>
+              <option value="solos">Nadie, lo hacemos solos</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje adicional <span style="color:#aaa;font-weight:400">(opcional)</span></label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cu√©ntanos m√°s sobre tu situaci√≥n actual..."></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn" id="submit-btn">
+            <span id="btn-text">Enviar solicitud de Asesor√≠a &rarr;</span>
+            <span id="btn-loading" style="display:none" aria-live="polite">Enviando...</span>
+          </button>
+          <p class="form-privacy">Tus datos no se comparten con terceros. Solo los usamos para contactarte.</p>
+        </form>
+        <div id="form-success" role="status" aria-live="polite">
+          <div class="success-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>¬°Solicitud recibida!</h3>
+          <p>Revisamos tu mensaje y te contactamos dentro de las pr√≥ximas 24 horas h√°biles.<br><br>Si tienes urgencia, escr√≠benos por WhatsApp: <strong>+569 34303320</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ‚îÄ‚îÄ‚îÄ FOOTER ‚îÄ‚îÄ‚îÄ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="https://copywriters.cl" class="footer-logo" aria-label="Ir a Copywriters.cl">Copy<span>writers</span>.cl</a>
+        <p>Agencia de marketing digital y contenidos para empresas chilenas.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links del footer">
+        <a href="https://copywriters.cl">Volver a copywriters.cl</a>
+        <a href="https://copywriters.cl/servicios">Otros servicios</a>
+        <a href="https://copywriters.cl/blog">Blog</a>
+        <a href="https://copywriters.cl/privacidad">Pol√≠tica de privacidad</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>¬© 2025 Copywriters.cl ‚Äî Asesor√≠a Digital. Todos los derechos reservados.</p>
+      <p>Del Inca 4622, Las Condes, Santiago &nbsp;¬∑&nbsp; contacto@copywriters.cl</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ‚îÄ‚îÄ‚îÄ EXIT POPUP ‚îÄ‚îÄ‚îÄ -->
+<div id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-hidden="true">
+  <div class="popup-card">
+    <button class="popup-close" id="popup-close" aria-label="Cerrar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h3 id="popup-title">¬øTe vas sin saber si tu marketing est√° funcionando?</h3>
+    <p>Descarga gratis nuestra checklist de asesor√≠a digital para pymes. 15 preguntas que todo due√±o deber√≠a hacerse.</p>
+    <form class="popup-form" id="popup-form" novalidate>
+      <input type="email" placeholder="tu@empresa.cl" required aria-label="Tu correo electr√≥nico" id="popup-email">
+      <button type="submit" aria-label="Recibir checklist">Enviar checklist &rarr;</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// ‚îÄ‚îÄ‚îÄ EmailJS ‚îÄ‚îÄ‚îÄ
+(function(){ emailjs.init({ publicKey: "46Wj5o5rVqgZqS7tM" }); })();
+const EMAILJS_SERVICE_ID    = "service_idi0z8x";
+const EMAILJS_TEMPLATE_USER = "template_oubd425";
+const EMAILJS_TEMPLATE_TEAM = "template_q8bzwjp";
+
+// ‚îÄ‚îÄ‚îÄ Intersection Observer ‚îÄ‚îÄ‚îÄ
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => io.observe(el));
+
+// ‚îÄ‚îÄ‚îÄ Nav scroll ‚îÄ‚îÄ‚îÄ
+const hdr = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// ‚îÄ‚îÄ‚îÄ Hamburger ‚îÄ‚îÄ‚îÄ
+const ham  = document.getElementById('hamburger');
+const mmenu = document.getElementById('mobile-menu');
+ham.addEventListener('click', () => {
+  const open = mmenu.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+});
+mmenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mmenu.classList.remove('open');
+    ham.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ‚îÄ‚îÄ‚îÄ Sticky bar ‚îÄ‚îÄ‚îÄ
+const stickyBar  = document.getElementById('sticky-bar');
+const heroEl     = document.getElementById('hero');
+const formEl     = document.getElementById('formulario');
+function updateBar() {
+  const hB = heroEl.getBoundingClientRect().bottom;
+  const fT = formEl.getBoundingClientRect().top;
+  const wH = window.innerHeight;
+  if (hB < 0 && fT > wH * 0.5) {
+    stickyBar.classList.add('visible');
+    stickyBar.classList.remove('hidden-bar');
+  } else {
+    stickyBar.classList.remove('visible');
+    stickyBar.classList.add('hidden-bar');
+  }
+}
+window.addEventListener('scroll', updateBar, { passive: true });
+
+// ‚îÄ‚îÄ‚îÄ CTA tracking ‚îÄ‚îÄ‚îÄ
+function trackCTA() {
+  if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');
+  if (typeof gtag !== 'undefined') gtag('event', 'select_item', {
+    item_list_name: 'asesoria_digital',
+    items: [{ item_name: 'Asesor√≠a Digital', price: 590000 }]
+  });
+}
+document.getElementById('hero-cta').addEventListener('click', trackCTA);
+document.getElementById('price-cta').addEventListener('click', trackCTA);
+document.querySelector('.sticky-btn').addEventListener('click', trackCTA);
+
+// ‚îÄ‚îÄ‚îÄ HubSpot chat conversion tracking ‚îÄ‚îÄ‚îÄ
+window.hsConversationsOnReady = window.hsConversationsOnReady || [];
+window.hsConversationsOnReady.push(function() {
+  window.HubSpotConversations.on('conversationStarted', function() {
+    if (typeof fbq !== 'undefined') fbq('track', 'Contact');
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'contact', { method: 'hubspot_chat' });
+      gtag('event', 'conversion', { send_to: 'AW-718076958/4eiRCNji4pgcEJ74s9YC' });
+    }
+  });
+});
+
+let vcFired = false;
+window.addEventListener('scroll', () => {
+  if (!vcFired && window.scrollY > document.body.scrollHeight * 0.5) {
+    vcFired = true;
+    if (typeof fbq !== 'undefined') fbq('track', 'ViewContent');
+  }
+}, { passive: true });
+
+// ‚îÄ‚îÄ‚îÄ Cupos badge ‚îÄ‚îÄ‚îÄ
+const cuposDisponibles = 3;
+document.getElementById('cupos-badge').innerHTML =
+  `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+   Solo ${cuposDisponibles} cupo${cuposDisponibles !== 1 ? 's' : ''} disponible${cuposDisponibles !== 1 ? 's' : ''} este mes`;
+
+// ‚îÄ‚îÄ‚îÄ FAQ ‚îÄ‚îÄ‚îÄ
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = document.getElementById(btn.getAttribute('aria-controls'));
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); });
+    document.querySelectorAll('.faq-answer').forEach(a => { a.style.maxHeight = '0'; });
+    if (!isOpen) {
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+
+// ‚îÄ‚îÄ‚îÄ Form validation & submit ‚îÄ‚îÄ‚îÄ
+const form = document.getElementById('contact-form');
+
+function showErr(id) { document.getElementById(id).classList.add('error'); document.getElementById(id+'-error').classList.add('visible'); }
+function clearErr(id) { document.getElementById(id).classList.remove('error'); document.getElementById(id+'-error').classList.remove('visible'); }
+
+['nombre','empresa','email','telefono'].forEach(id => {
+  const f = document.getElementById(id);
+  f.addEventListener('blur', () => {
+    if (id === 'email') {
+      if (!f.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)) showErr(id); else clearErr(id);
+    } else {
+      if (!f.value.trim()) showErr(id); else clearErr(id);
+    }
+  });
+  f.addEventListener('input', () => clearErr(id));
+});
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  let valid = true;
+  ['nombre','empresa','telefono'].forEach(id => { if (!document.getElementById(id).value.trim()) { showErr(id); valid = false; } });
+  const ev = document.getElementById('email').value;
+  if (!ev || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ev)) { showErr('email'); valid = false; }
+  if (!valid) return;
+
+  const btn = document.getElementById('submit-btn');
+  document.getElementById('btn-text').style.display = 'none';
+  document.getElementById('btn-loading').style.display = 'inline';
+  btn.disabled = true;
+
+  const params = {
+    nombre:    document.getElementById('nombre').value.trim(),
+    empresa:   document.getElementById('empresa').value.trim(),
+    email:     ev.trim(),
+    telefono:  document.getElementById('telefono').value.trim(),
+    inversion: document.getElementById('inversion').value || 'No especificado',
+    situacion: document.getElementById('situacion').value || 'No especificado',
+    mensaje:   document.getElementById('mensaje').value.trim() || '‚Äî',
+  };
+
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, params);
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_TEAM, params);
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', { event_category: 'asesoria_digital', event_label: 'formulario_contacto' });
+      gtag('event', 'conversion', { send_to: 'AW-718076958/4eiRCNji4pgcEJ74s9YC' });
+    }
+    if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+    form.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch(err) {
+    btn.disabled = false;
+    document.getElementById('btn-text').style.display = 'inline';
+    document.getElementById('btn-loading').style.display = 'none';
+    alert('Hubo un error al enviar el formulario. Por favor intenta nuevamente o escr√≠benos a contacto@copywriters.cl');
+    console.error('EmailJS error:', err);
+  }
+});
+
+// ‚îÄ‚îÄ‚îÄ Exit popup ‚îÄ‚îÄ‚îÄ
+let exitShown = false;
+document.addEventListener('mouseleave', (e) => { if (!exitShown && e.clientY < 10) showExit(); });
+let mTimer;
+if (window.innerWidth < 768) mTimer = setTimeout(() => { if (!exitShown) showExit(); }, 60000);
+
+function showExit() {
+  exitShown = true;
+  clearTimeout(mTimer);
+  const p = document.getElementById('exit-popup');
+  p.classList.add('active');
+  p.setAttribute('aria-hidden', 'false');
+  document.getElementById('popup-email').focus();
+}
+document.getElementById('popup-close').addEventListener('click', closeExit);
+document.getElementById('exit-popup').addEventListener('click', (e) => { if (e.target === document.getElementById('exit-popup')) closeExit(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeExit(); });
+function closeExit() {
+  const p = document.getElementById('exit-popup');
+  p.classList.remove('active');
+  p.setAttribute('aria-hidden', 'true');
+}
+
+document.getElementById('popup-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const inp = document.getElementById('popup-email');
+  if (!inp.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value)) {
+    inp.style.borderColor = 'var(--error)';
+    return;
+  }
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, {
+      nombre: 'all√≠',
+      email: inp.value.trim(),
+      empresa: '‚Äî', telefono: '‚Äî', inversion: '‚Äî', situacion: '‚Äî', mensaje: 'Lead desde popup checklist'
+    });
+  } catch(err) { console.error('EmailJS popup error:', err); }
+  document.querySelector('.popup-card').innerHTML = `
+    <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px;line-height:1.2">¬°Checklist en camino!</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escr√≠benos a contacto@copywriters.cl</p>
+  `;
+  setTimeout(closeExit, 4000);
+});
+</script>
+</body>
+</html>
 
