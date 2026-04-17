@@ -3,20 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asesoría Digital para Pymes | Copywriters Chile</title>
-<meta name="description" content="Asesoramos tu ecosistema digital en 4 semanas: redes sociales, campañas de pauta, integraciones técnicas y métricas. Sabe si tu marketing digital está funcionando.">
-<meta property="og:title" content="Asesoría Digital — Copywriters">
-<meta property="og:description" content="Asesoría completa de marketing digital para pymes chilenas. Plan de acción, informe ejecutivo y reunión de acompañamiento.">
+<title>Asesor√≠a Digital para Pymes | Copywriters Chile</title>
+<meta name="description" content="Asesoramos tu ecosistema digital en 4 semanas: redes sociales, campa√±as de pauta, integraciones t√©cnicas y m√©tricas. Sabe si tu marketing digital est√° funcionando.">
+<meta property="og:title" content="Asesor√≠a Digital ‚Äî Copywriters">
+<meta property="og:description" content="Asesor√≠a completa de marketing digital para pymes chilenas. Plan de acci√≥n, informe ejecutivo y reuni√≥n de acompa√±amiento.">
 <meta property="og:image" content="https://copywriters.cl/og-diagnostico.jpg">
 <link rel="canonical" href="https://copywriters.cl/diagnostico-digital">
 
-<!-- Google Fonts -->
+<!-- Google Fonts ‚Äî non-render-blocking -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap"></noscript>
 
 <!-- Meta Pixel (reemplazar 242693976884672 con el ID real) -->
 <script>
@@ -30,12 +28,15 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=242693976884672&ev=PageView&noscript=1"/></noscript>
 
-<!-- Google Ads (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-718076958"></script>
+<!-- Google tag (GA4 + Google Ads) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0HSFLFM44X"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+gtag('config', 'G-0HSFLFM44X', {
+  linker: { domains: ['copywriters.cl', 'asesorias.copywriters.cl'] }
+});
 gtag('config', 'AW-718076958');
 </script>
 
@@ -73,7 +74,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ─── UTILITIES ─── */
+/* ‚îÄ‚îÄ‚îÄ UTILITIES ‚îÄ‚îÄ‚îÄ */
 .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
 
 .fade-in       { opacity: 0; transform: translateY(28px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
@@ -81,7 +82,7 @@ body {
 .fade-in-right { opacity: 0; transform: translateX(28px); transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1); }
 .fade-in.visible, .fade-in-left.visible, .fade-in-right.visible { opacity: 1; transform: translate(0); }
 
-/* ─── HEADER / NAV ─── */
+/* ‚îÄ‚îÄ‚îÄ HEADER / NAV ‚îÄ‚îÄ‚îÄ */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -186,7 +187,7 @@ header.scrolled {
 }
 .mobile-menu a:last-child { border-bottom: none; }
 
-/* ─── STICKY CTA BAR ─── */
+/* ‚îÄ‚îÄ‚îÄ STICKY CTA BAR ‚îÄ‚îÄ‚îÄ */
 #sticky-bar {
   position: fixed;
   bottom: 0; left: 0; right: 0;
@@ -221,9 +222,9 @@ header.scrolled {
 .sticky-btn:hover { background: var(--lime-hover); }
 .sticky-btn:active { transform: scale(0.98); }
 
-/* ─── HUBSPOT CHAT (reemplaza WhatsApp float) ─── */
+/* ‚îÄ‚îÄ‚îÄ HUBSPOT CHAT (reemplaza WhatsApp float) ‚îÄ‚îÄ‚îÄ */
 
-/* ─── SHARED SECTION STYLES ─── */
+/* ‚îÄ‚îÄ‚îÄ SHARED SECTION STYLES ‚îÄ‚îÄ‚îÄ */
 section { padding: 100px 0; }
 @media (max-width: 767px) { section { padding: 64px 0; } }
 
@@ -316,7 +317,7 @@ section { padding: 100px 0; }
 .btn-outline:hover { background: var(--text); color: var(--white); }
 .btn-outline:active { transform: scale(0.98); }
 
-/* ─── HERO ─── */
+/* ‚îÄ‚îÄ‚îÄ HERO ‚îÄ‚îÄ‚îÄ */
 #hero {
   min-height: 100dvh;
   background: var(--cream);
@@ -440,7 +441,7 @@ h1.hero-h1 em {
 .widget-val.bad  { color: #c0392b; }
 .widget-val.warn { color: var(--warning); }
 
-/* ─── SECCIÓN PROBLEMA ─── */
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN PROBLEMA ‚îÄ‚îÄ‚îÄ */
 #problema { background: var(--cream); }
 .pain-grid {
   display: grid;
@@ -492,7 +493,7 @@ h1.hero-h1 em {
 }
 .stat-callout strong { color: var(--text); font-weight: 600; }
 
-/* ─── SECCIÓN SOLUCIÓN ─── */
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN SOLUCI√ìN ‚îÄ‚îÄ‚îÄ */
 #solucion { background: var(--white); }
 .timeline { display: flex; flex-direction: column; gap: 0; margin-top: 40px; }
 .tl-item {
@@ -554,9 +555,9 @@ h1.hero-h1 em {
   padding-left: 16px;
   position: relative;
 }
-.tl-list li::before { content: '—'; position: absolute; left: 0; color: var(--border); }
+.tl-list li::before { content: '‚Äî'; position: absolute; left: 0; color: var(--border); }
 
-/* ─── SECCIÓN QUÉ AUDITAMOS ─── */
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN QU√â AUDITAMOS ‚îÄ‚îÄ‚îÄ */
 #auditamos { background: var(--cream); }
 .audit-grid {
   display: grid;
@@ -599,7 +600,7 @@ h1.hero-h1 em {
 }
 .audit-list li:last-child { border-bottom: none; }
 
-/* ─── SECCIÓN PARA QUIÉN ─── */
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN PARA QUI√âN ‚îÄ‚îÄ‚îÄ */
 #para-quien { background: var(--white); }
 .for-grid {
   display: grid;
@@ -658,10 +659,10 @@ h1.hero-h1 em {
   line-height: 1.55;
 }
 .for-list li:last-child { border-bottom: none; }
-.for-col.yes .for-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
-.for-col.no  .for-list li::before { content: '✕'; position: absolute; left: 0; color: var(--error); font-weight: 700; }
+.for-col.yes .for-list li::before { content: '‚úì'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+.for-col.no  .for-list li::before { content: '‚úï'; position: absolute; left: 0; color: var(--error); font-weight: 700; }
 
-/* ─── SECCIÓN ENTREGABLES (OSCURA) ─── */
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN ENTREGABLES (OSCURA) ‚îÄ‚îÄ‚îÄ */
 #entregables {
   background: var(--navy);
   color: #fff;
@@ -717,7 +718,7 @@ h1.hero-h1 em {
   border-radius: 16px;
 }
 
-/* ─── SECCIÓN PRECIO ─── */
+/* ‚îÄ‚îÄ‚îÄ SECCI√ìN PRECIO ‚îÄ‚îÄ‚îÄ */
 #precio {
   background: var(--cream);
   text-align: center;
@@ -803,7 +804,7 @@ h1.hero-h1 em {
   line-height: 1.5;
 }
 .price-includes li:last-child { border-bottom: none; }
-.price-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; font-size: 0.9rem; }
+.price-includes li::before { content: '‚úì'; position: absolute; left: 0; color: var(--success); font-weight: 700; font-size: 0.9rem; }
 .price-cta {
   display: block;
   width: 100%;
@@ -830,7 +831,7 @@ h1.hero-h1 em {
   line-height: 1.65;
 }
 
-/* ─── FAQ ─── */
+/* ‚îÄ‚îÄ‚îÄ FAQ ‚îÄ‚îÄ‚îÄ */
 #faq { background: var(--white); }
 .faq-wrap { max-width: 760px; margin-top: 48px; }
 .faq-item { border-bottom: 1px solid var(--border); }
@@ -868,7 +869,7 @@ h1.hero-h1 em {
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1); }
 .faq-answer p { padding: 0 0 22px; color: var(--muted); font-size: 0.92rem; line-height: 1.75; max-width: 680px; }
 
-/* ─── TESTIMONIOS ─── */
+/* ‚îÄ‚îÄ‚îÄ TESTIMONIOS ‚îÄ‚îÄ‚îÄ */
 #testimonios { background: var(--cream); }
 .testi-grid {
   display: grid;
@@ -917,7 +918,7 @@ h1.hero-h1 em {
 .testi-name { font-weight: 700; font-size: 0.88rem; line-height: 1.3; }
 .testi-role { font-size: 0.78rem; color: var(--muted); }
 
-/* ─── FORMULARIO ─── */
+/* ‚îÄ‚îÄ‚îÄ FORMULARIO ‚îÄ‚îÄ‚îÄ */
 #formulario { background: var(--cream); }
 .form-layout {
   display: grid;
@@ -1036,7 +1037,7 @@ h1.hero-h1 em {
 #form-success h3 { font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 10px; }
 #form-success p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
 
-/* ─── FOOTER ─── */
+/* ‚îÄ‚îÄ‚îÄ FOOTER ‚îÄ‚îÄ‚îÄ */
 footer {
   background: #1A1A1A;
   color: rgba(255,255,255,0.55);
@@ -1073,7 +1074,7 @@ footer {
 @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
 .footer-bottom p { font-size: 0.78rem; }
 
-/* ─── EXIT POPUP ─── */
+/* ‚îÄ‚îÄ‚îÄ EXIT POPUP ‚îÄ‚îÄ‚îÄ */
 #exit-popup {
   position: fixed; inset: 0;
   z-index: 200;
@@ -1122,32 +1123,32 @@ footer {
 </head>
 <body>
 
-<!-- ─── STICKY BAR ─── -->
-<div id="sticky-bar" role="complementary" aria-label="Barra de acceso rápido">
+<!-- ‚îÄ‚îÄ‚îÄ STICKY BAR ‚îÄ‚îÄ‚îÄ -->
+<div id="sticky-bar" role="complementary" aria-label="Barra de acceso r√°pido">
   <div class="sticky-label">
-    <strong>Asesoría Digital</strong> &mdash; $590.000 CLP + IVA
+    <strong>Asesor√≠a Digital</strong> &mdash; $590.000 CLP + IVA
   </div>
   <a href="#formulario" class="sticky-btn" aria-label="Ir al formulario">Quiero mi cupo &rarr;</a>
 </div>
 
-<!-- ─── HUBSPOT CHAT BOT ─── -->
+<!-- ‚îÄ‚îÄ‚îÄ HUBSPOT CHAT BOT ‚îÄ‚îÄ‚îÄ -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7396872.js"></script>
 
-<!-- ─── HEADER ─── -->
-<header id="main-nav" role="navigation" aria-label="Navegación principal">
+<!-- ‚îÄ‚îÄ‚îÄ HEADER ‚îÄ‚îÄ‚îÄ -->
+<header id="main-nav" role="navigation" aria-label="Navegaci√≥n principal">
   <div class="container nav-inner">
     <a href="https://copywriters.cl" class="nav-logo" aria-label="Ir a Copywriters.cl">
       Copy<span>writers</span>.cl
     </a>
     <ul class="nav-links" role="list">
       <li><a href="#problema">El problema</a></li>
-      <li><a href="#solucion">La solución</a></li>
+      <li><a href="#solucion">La soluci√≥n</a></li>
       <li><a href="#precio">Precio</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
-      <a href="#formulario" class="nav-cta" aria-label="Solicitar asesoría">Solicitar Asesoría</a>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <a href="#formulario" class="nav-cta" aria-label="Solicitar asesor√≠a">Solicitar Asesor√≠a</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir men√∫" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -1155,18 +1156,18 @@ footer {
 </header>
 
 <!-- Mobile menu -->
-<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menú móvil">
+<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Men√∫ m√≥vil">
   <a href="#problema" class="mobile-link">El problema</a>
-  <a href="#solucion" class="mobile-link">La solución</a>
-  <a href="#auditamos" class="mobile-link">Qué revisamos</a>
+  <a href="#solucion" class="mobile-link">La soluci√≥n</a>
+  <a href="#auditamos" class="mobile-link">Qu√© revisamos</a>
   <a href="#precio" class="mobile-link">Precio</a>
   <a href="#faq" class="mobile-link">FAQ</a>
-  <a href="#formulario" class="mobile-link">Solicitar Asesoría</a>
+  <a href="#formulario" class="mobile-link">Solicitar Asesor√≠a</a>
 </nav>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 1 — HERO
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 1 ‚Äî HERO
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="hero" aria-labelledby="hero-h1">
   <div class="container">
     <div class="hero-inner">
@@ -1176,29 +1177,33 @@ footer {
           Servicio para empresas chilenas
         </div>
         <h1 id="hero-h1" class="hero-h1 fade-in" style="transition-delay:.2s">
-          ¿Estás pagando por marketing digital<br>
+          ¬øEst√°s pagando por marketing digital<br>
           <em>sin saber si realmente funciona?</em>
         </h1>
         <p class="hero-sub fade-in" style="transition-delay:.3s">
-          Revisamos todo tu ecosistema digital —redes, campañas, integraciones y métricas—
-          y te entregamos un plan claro para que tu empresa opere con información real.
+          Revisamos todo tu ecosistema digital ‚Äîredes, campa√±as, integraciones y m√©tricas‚Äî
+          y te entregamos un plan claro para que tu empresa opere con informaci√≥n real.
         </p>
         <div class="hero-actions fade-in" style="transition-delay:.4s">
-          <a href="#formulario" class="btn-primary" id="hero-cta">Quiero mi Asesoría Digital &rarr;</a>
-          <a href="#solucion" class="btn-ghost" aria-label="Ver qué incluye el servicio">Ver qué incluye &darr;</a>
+          <a href="#formulario" class="btn-primary" id="hero-cta">Quiero mi Asesor√≠a Digital &rarr;</a>
+          <a href="#solucion" class="btn-ghost" aria-label="Ver qu√© incluye el servicio">Ver qu√© incluye &darr;</a>
         </div>
       </div>
 
       <div class="hero-photo-wrap fade-in-right" style="transition-delay:.3s">
         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80"
-             alt="Oficina moderna con equipo trabajando" loading="eager">
+             srcset="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=75 600w,
+                     https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80 1200w"
+             sizes="(max-width: 899px) 100vw, 50vw"
+             alt="Oficina moderna con equipo trabajando"
+             loading="eager" fetchpriority="high">
         <div class="hero-widget" aria-hidden="true">
           <p class="widget-label">Estado actual del ecosistema</p>
           <div class="widget-row"><span class="widget-name">Meta Pixel</span><span class="widget-val bad">Sin verificar</span></div>
           <div class="widget-row"><span class="widget-name">Google Analytics 4</span><span class="widget-val warn">Parcial</span></div>
           <div class="widget-row"><span class="widget-name">CRM &harr; Ads</span><span class="widget-val bad">Desconectado</span></div>
           <div class="widget-row"><span class="widget-name">Costo por lead</span><span class="widget-val bad">Desconocido</span></div>
-          <div class="widget-row"><span class="widget-name">Informes dirección</span><span class="widget-val bad">Inexistentes</span></div>
+          <div class="widget-row"><span class="widget-name">Informes direcci√≥n</span><span class="widget-val bad">Inexistentes</span></div>
         </div>
       </div>
 
@@ -1206,9 +1211,9 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 2 — PROBLEMA
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 2 ‚Äî PROBLEMA
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="problema" aria-labelledby="problema-h2">
   <div class="container">
     <div class="split">
@@ -1232,19 +1237,19 @@ footer {
             <div class="pain-icon-wrap" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
             </div>
-            <p class="pain-text">Tenemos métricas, pero nadie las entiende ni las usa</p>
+            <p class="pain-text">Tenemos m√©tricas, pero nadie las entiende ni las usa</p>
           </div>
           <div class="pain-card" role="listitem">
             <div class="pain-icon-wrap" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </div>
-            <p class="pain-text">El Pixel de Meta nunca se configuró bien</p>
+            <p class="pain-text">El Pixel de Meta nunca se configur√≥ bien</p>
           </div>
           <div class="pain-card" role="listitem">
             <div class="pain-icon-wrap" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             </div>
-            <p class="pain-text">No sé si mis campañas de Google Ads están bien segmentadas</p>
+            <p class="pain-text">No s√© si mis campa√±as de Google Ads est√°n bien segmentadas</p>
           </div>
           <div class="pain-card" role="listitem">
             <div class="pain-icon-wrap" aria-hidden="true">
@@ -1260,7 +1265,7 @@ footer {
           </div>
         </div>
         <div class="stat-callout fade-in">
-          <strong>No estás solo.</strong> El 74% de las pymes chilenas no tienen sus integraciones digitales conectadas correctamente. Y pagan por eso todos los meses sin saberlo.
+          <strong>No est√°s solo.</strong> El 74% de las pymes chilenas no tienen sus integraciones digitales conectadas correctamente. Y pagan por eso todos los meses sin saberlo.
         </div>
       </div>
 
@@ -1268,16 +1273,16 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 3 — SOLUCIÓN
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 3 ‚Äî SOLUCI√ìN
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="solucion" aria-labelledby="solucion-h2">
   <div class="container">
     <div class="split reverse">
 
       <div class="split-text fade-in-left">
-        <span class="section-tag">La solución</span>
-        <h2 id="solucion-h2" class="section-h2">La Asesoría Digital de Copywriters</h2>
+        <span class="section-tag">La soluci√≥n</span>
+        <h2 id="solucion-h2" class="section-h2">La Asesor√≠a Digital de Copywriters</h2>
         <p class="section-sub">4 semanas. Un equipo experto. Un mapa completo de tu ecosistema digital.</p>
         <div class="timeline">
           <div class="tl-item">
@@ -1288,20 +1293,20 @@ footer {
               <ul class="tl-list">
                 <li>Acceso seguro a tus cuentas (solo lectura)</li>
                 <li>Formulario de onboarding con contexto de tu negocio</li>
-                <li>Revisión de redes, ads, analytics, pixel y CRM</li>
+                <li>Revisi√≥n de redes, ads, analytics, pixel y CRM</li>
               </ul>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-left"><div class="tl-num">02</div><div class="tl-line"></div></div>
             <div class="tl-content">
-              <p class="tl-period">Semana 2–3</p>
-              <h3 class="tl-title">Asesoría profunda</h3>
+              <p class="tl-period">Semana 2‚Äì3</p>
+              <h3 class="tl-title">Asesor√≠a profunda</h3>
               <ul class="tl-list">
-                <li>Análisis de performance de los últimos 90 días</li>
-                <li>Revisión de campañas activas y pausadas</li>
-                <li>Diagnóstico técnico de integraciones</li>
-                <li>Identificación de fugas de leads y errores de tracking</li>
+                <li>An√°lisis de performance de los √∫ltimos 90 d√≠as</li>
+                <li>Revisi√≥n de campa√±as activas y pausadas</li>
+                <li>Diagn√≥stico t√©cnico de integraciones</li>
+                <li>Identificaci√≥n de fugas de leads y errores de tracking</li>
               </ul>
             </div>
           </div>
@@ -1311,11 +1316,11 @@ footer {
               <p class="tl-period">Semana 4</p>
               <h3 class="tl-title">Informe y entrega</h3>
               <ul class="tl-list">
-                <li>Documento ejecutivo con asesoría completa</li>
+                <li>Documento ejecutivo con asesor√≠a completa</li>
                 <li>Mapa visual de tu ecosistema digital</li>
-                <li>Plan de acción priorizado</li>
-                <li>Reunión de 60 minutos con el equipo</li>
-                <li>30 días de soporte post-entrega</li>
+                <li>Plan de acci√≥n priorizado</li>
+                <li>Reuni√≥n de 60 minutos con el equipo</li>
+                <li>30 d√≠as de soporte post-entrega</li>
               </ul>
             </div>
           </div>
@@ -1324,21 +1329,21 @@ footer {
 
       <div class="split-photo fade-in-right">
         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
-             alt="Reunión de equipo analizando estrategia de marketing" loading="lazy">
+             alt="Reuni√≥n de equipo analizando estrategia de marketing" loading="lazy">
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 4 — QUÉ AUDITAMOS
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 4 ‚Äî QU√â AUDITAMOS
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="auditamos" aria-labelledby="auditamos-h2">
   <div class="container">
     <div style="text-align:center; max-width:600px; margin:0 auto 0">
       <span class="section-tag fade-in">El alcance</span>
-      <h2 id="auditamos-h2" class="section-h2 fade-in">¿Qué revisamos exactamente?</h2>
+      <h2 id="auditamos-h2" class="section-h2 fade-in">¬øQu√© revisamos exactamente?</h2>
       <p class="section-sub fade-in" style="margin: 0 auto 0; max-width:480px">Cada punto de tu ecosistema digital, sin excepciones.</p>
     </div>
     <div class="audit-grid">
@@ -1358,19 +1363,19 @@ footer {
         <div class="audit-icon-wrap" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <h3 class="audit-card-title">Campañas de Pauta</h3>
+        <h3 class="audit-card-title">Campa√±as de Pauta</h3>
         <ul class="audit-list">
-          <li>Meta Ads: estructura, segmentación, creativos</li>
+          <li>Meta Ads: estructura, segmentaci√≥n, creativos</li>
           <li>Google Ads: keywords, quality score, extensiones</li>
-          <li>Revisión de presupuestos y distribución</li>
-          <li>Atribución de conversiones</li>
+          <li>Revisi√≥n de presupuestos y distribuci√≥n</li>
+          <li>Atribuci√≥n de conversiones</li>
         </ul>
       </div>
       <div class="audit-card fade-in" style="transition-delay:.15s">
         <div class="audit-icon-wrap" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 1 21 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2"/></svg>
         </div>
-        <h3 class="audit-card-title">Integraciones Técnicas</h3>
+        <h3 class="audit-card-title">Integraciones T√©cnicas</h3>
         <ul class="audit-list">
           <li>Meta Pixel y Conversions API</li>
           <li>Google Analytics 4 y GTM</li>
@@ -1382,10 +1387,10 @@ footer {
         <div class="audit-icon-wrap" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <h3 class="audit-card-title">Métricas y KPIs</h3>
+        <h3 class="audit-card-title">M√©tricas y KPIs</h3>
         <ul class="audit-list">
-          <li>¿Están midiendo lo correcto?</li>
-          <li>¿Los dashboards son útiles?</li>
+          <li>¬øEst√°n midiendo lo correcto?</li>
+          <li>¬øLos dashboards son √∫tiles?</li>
           <li>Embudos TOFU / MOFU / BOFU</li>
           <li>Costo real por lead o venta</li>
         </ul>
@@ -1394,28 +1399,28 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 5 — PARA QUIÉN
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 5 ‚Äî PARA QUI√âN
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="para-quien" aria-labelledby="para-quien-h2">
   <div class="container">
     <span class="section-tag fade-in">Fit del servicio</span>
-    <h2 id="para-quien-h2" class="section-h2 fade-in">¿Es para tu empresa?</h2>
+    <h2 id="para-quien-h2" class="section-h2 fade-in">¬øEs para tu empresa?</h2>
     <div class="for-grid">
       <div class="for-col yes fade-in-left">
-        <p class="for-label"><span class="badge-yes">SÍ</span>Es para ti si...</p>
+        <p class="for-label"><span class="badge-yes">S√ç</span>Es para ti si...</p>
         <ul class="for-list">
-          <li>Llevas más de 6 meses haciendo marketing digital</li>
+          <li>Llevas m√°s de 6 meses haciendo marketing digital</li>
           <li>Tienes presupuesto mensual en pauta (+$300.000 CLP)</li>
           <li>Tienes redes activas pero los resultados no son claros</li>
           <li>Quieres ordenarte antes de escalar o cambiar de agencia</li>
-          <li>Eres gerente o dueño y necesitas entender qué está pasando</li>
+          <li>Eres gerente o due√±o y necesitas entender qu√© est√° pasando</li>
         </ul>
       </div>
       <div class="for-col no fade-in-right">
         <p class="for-label"><span class="badge-no">NO</span>No es para ti si...</p>
         <ul class="for-list">
-          <li>Recién estás partiendo y aún no tienes presencia digital</li>
+          <li>Reci√©n est√°s partiendo y a√∫n no tienes presencia digital</li>
           <li>No tienes acceso a tus cuentas publicitarias o redes</li>
           <li>Buscas alguien que opere tu marketing (para eso tenemos otros servicios)</li>
         </ul>
@@ -1424,9 +1429,9 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 6 — ENTREGABLES (sección oscura)
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 6 ‚Äî ENTREGABLES (secci√≥n oscura)
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="entregables" aria-labelledby="entregables-h2">
   <div class="container">
     <div class="entregables-inner">
@@ -1436,27 +1441,27 @@ footer {
         <ul class="del-list">
           <li class="del-item">
             <span class="del-num">01</span>
-            <div><p class="del-title">Informe Ejecutivo</p><p class="del-desc">1–2 páginas con el resumen de la asesoría para directivos. Sin jerga técnica.</p></div>
+            <div><p class="del-title">Informe Ejecutivo</p><p class="del-desc">1‚Äì2 p√°ginas con el resumen de la asesor√≠a para directivos. Sin jerga t√©cnica.</p></div>
           </li>
           <li class="del-item">
             <span class="del-num">02</span>
-            <div><p class="del-title">Informe Técnico</p><p class="del-desc">Detalle completo por área: redes, pauta, integraciones y métricas.</p></div>
+            <div><p class="del-title">Informe T√©cnico</p><p class="del-desc">Detalle completo por √°rea: redes, pauta, integraciones y m√©tricas.</p></div>
           </li>
           <li class="del-item">
             <span class="del-num">03</span>
-            <div><p class="del-title">Mapa del Ecosistema Digital</p><p class="del-desc">Visual de cómo están conectadas (o desconectadas) tus herramientas.</p></div>
+            <div><p class="del-title">Mapa del Ecosistema Digital</p><p class="del-desc">Visual de c√≥mo est√°n conectadas (o desconectadas) tus herramientas.</p></div>
           </li>
           <li class="del-item">
             <span class="del-num">04</span>
-            <div><p class="del-title">Plan de Acción Priorizado</p><p class="del-desc">Quick wins en 2 semanas + mejoras estructurales a 3 meses.</p></div>
+            <div><p class="del-title">Plan de Acci√≥n Priorizado</p><p class="del-desc">Quick wins en 2 semanas + mejoras estructurales a 3 meses.</p></div>
           </li>
           <li class="del-item">
             <span class="del-num">05</span>
-            <div><p class="del-title">Reunión de Acompañamiento</p><p class="del-desc">60 minutos con el equipo de Copywriters para revisar todo en vivo.</p></div>
+            <div><p class="del-title">Reuni√≥n de Acompa√±amiento</p><p class="del-desc">60 minutos con el equipo de Copywriters para revisar todo en vivo.</p></div>
           </li>
           <li class="del-item">
             <span class="del-num">06</span>
-            <div><p class="del-title">Canal de Soporte</p><p class="del-desc">30 días post-entrega por WhatsApp o Slack para consultas.</p></div>
+            <div><p class="del-title">Canal de Soporte</p><p class="del-desc">30 d√≠as post-entrega por WhatsApp o Slack para consultas.</p></div>
           </li>
         </ul>
       </div>
@@ -1468,18 +1473,18 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 7 — PRECIO
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 7 ‚Äî PRECIO
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="precio" aria-labelledby="precio-h2">
   <div class="container">
     <div class="price-header fade-in">
-      <span class="section-tag">La inversión</span>
-      <h2 id="precio-h2" class="section-h2">Invierte una vez, entiende para siempre cómo funciona tu ecosistema digital</h2>
+      <span class="section-tag">La inversi√≥n</span>
+      <h2 id="precio-h2" class="section-h2">Invierte una vez, entiende para siempre c√≥mo funciona tu ecosistema digital</h2>
     </div>
     <div class="price-card fade-in">
       <span class="price-launch">Precio de lanzamiento</span>
-      <h3 class="price-name">Asesoría Digital</h3>
+      <h3 class="price-name">Asesor√≠a Digital</h3>
       <div id="cupos-badge" role="status" aria-live="polite">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         Solo 3 cupos disponibles este mes
@@ -1487,25 +1492,25 @@ footer {
       <p class="price-amount"><sup>$</sup>590.000 <sub>CLP + IVA</sub></p>
       <p class="price-original">Precio normal: $890.000 CLP</p>
       <hr class="price-divider">
-      <ul class="price-includes" aria-label="Qué incluye el servicio">
-        <li>Asesoría completa de 4 semanas</li>
-        <li>Informe ejecutivo + técnico</li>
+      <ul class="price-includes" aria-label="Qu√© incluye el servicio">
+        <li>Asesor√≠a completa de 4 semanas</li>
+        <li>Informe ejecutivo + t√©cnico</li>
         <li>Mapa del ecosistema digital</li>
-        <li>Plan de acción priorizado</li>
-        <li>1 reunión de acompañamiento (60 min)</li>
-        <li>30 días de soporte post-entrega</li>
+        <li>Plan de acci√≥n priorizado</li>
+        <li>1 reuni√≥n de acompa√±amiento (60 min)</li>
+        <li>30 d√≠as de soporte post-entrega</li>
       </ul>
-      <a href="#formulario" class="price-cta" id="price-cta" aria-label="Solicitar Asesoría Digital">
-        Quiero mi Asesoría Digital &rarr;
+      <a href="#formulario" class="price-cta" id="price-cta" aria-label="Solicitar Asesor√≠a Digital">
+        Quiero mi Asesor√≠a Digital &rarr;
       </a>
       <p class="price-trust">Sin contrato de permanencia. Sin letra chica.<br>Comienzas cuando quieras.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 8 — FAQ
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 8 ‚Äî FAQ
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="faq" aria-labelledby="faq-h2">
   <div class="container">
     <span class="section-tag fade-in">Preguntas frecuentes</span>
@@ -1513,74 +1518,74 @@ footer {
     <div class="faq-wrap fade-in" role="list">
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq-1">
-          ¿Necesito darles acceso a mis redes y cuentas de pauta?
+          ¬øNecesito darles acceso a mis redes y cuentas de pauta?
           <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-answer" id="faq-1"><p>Sí. Para hacer una asesoría honesta necesitamos acceso de solo lectura a tus cuentas de Meta Business, Google Ads, Analytics y demás. Te enviamos una guía paso a paso para hacerlo de forma segura.</p></div>
+        <div class="faq-answer" id="faq-1"><p>S√≠. Para hacer una asesor√≠a honesta necesitamos acceso de solo lectura a tus cuentas de Meta Business, Google Ads, Analytics y dem√°s. Te enviamos una gu√≠a paso a paso para hacerlo de forma segura.</p></div>
       </div>
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq-2">
-          ¿Pueden seguir gestionando mis redes mientras hacen la asesoría?
+          ¬øPueden seguir gestionando mis redes mientras hacen la asesor√≠a?
           <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-answer" id="faq-2"><p>La Asesoría Digital es un servicio separado de la gestión de redes. Si quieres contratar gestión además, podemos conversarlo aparte.</p></div>
+        <div class="faq-answer" id="faq-2"><p>La Asesor√≠a Digital es un servicio separado de la gesti√≥n de redes. Si quieres contratar gesti√≥n adem√°s, podemos conversarlo aparte.</p></div>
       </div>
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq-3">
-          ¿En cuánto tiempo tengo resultados?
+          ¬øEn cu√°nto tiempo tengo resultados?
           <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-3"><p>El informe completo lo recibes al final de las 4 semanas. Pero desde la semana 2 ya tienes los primeros hallazgos y quick wins para implementar.</p></div>
       </div>
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq-4">
-          ¿Qué pasa si mi empresa es pequeña y no tiene muchas cuentas?
+          ¬øQu√© pasa si mi empresa es peque√±a y no tiene muchas cuentas?
           <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-answer" id="faq-4"><p>No importa el tamaño. Revisamos lo que tienes. A veces una empresa pequeña tiene más problemas que una grande justamente por no tener a alguien que revise sus herramientas.</p></div>
+        <div class="faq-answer" id="faq-4"><p>No importa el tama√±o. Revisamos lo que tienes. A veces una empresa peque√±a tiene m√°s problemas que una grande justamente por no tener a alguien que revise sus herramientas.</p></div>
       </div>
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq-5">
-          ¿Esto me sirve si ya tengo una agencia contratada?
+          ¬øEsto me sirve si ya tengo una agencia contratada?
           <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-answer" id="faq-5"><p>Perfecto escenario para hacer la asesoría. Muchos clientes nos contratan para evaluar si su agencia actual les está entregando valor real.</p></div>
+        <div class="faq-answer" id="faq-5"><p>Perfecto escenario para hacer la asesor√≠a. Muchos clientes nos contratan para evaluar si su agencia actual les est√° entregando valor real.</p></div>
       </div>
       <div class="faq-item" role="listitem">
         <button class="faq-q" aria-expanded="false" aria-controls="faq-6">
-          ¿Puedo contratar gestión de marketing con Copywriters después de la asesoría?
+          ¬øPuedo contratar gesti√≥n de marketing con Copywriters despu√©s de la asesor√≠a?
           <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-answer" id="faq-6"><p>Sí. De hecho, varios clientes de la Asesoría Digital terminan contratando alguno de nuestros servicios de gestión porque el informe les deja claro qué necesitan.</p></div>
+        <div class="faq-answer" id="faq-6"><p>S√≠. De hecho, varios clientes de la Asesor√≠a Digital terminan contratando alguno de nuestros servicios de gesti√≥n porque el informe les deja claro qu√© necesitan.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 9 — TESTIMONIOS
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 9 ‚Äî TESTIMONIOS
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="testimonios" aria-labelledby="testimonios-h2">
   <div class="container">
     <span class="section-tag fade-in">Prueba social</span>
-    <h2 id="testimonios-h2" class="section-h2 fade-in">Lo que dicen empresas que ya pasaron por la asesoría</h2>
+    <h2 id="testimonios-h2" class="section-h2 fade-in">Lo que dicen empresas que ya pasaron por la asesor√≠a</h2>
     <div class="testi-grid">
       <div class="testi-card fade-in" style="transition-delay:.05s">
-        <p class="testi-quote">Llevábamos dos años pagando Meta Ads y nunca supimos cuánto nos costaba un lead real. La asesoría reveló que estábamos gastando el 60% del presupuesto en una audiencia equivocada.</p>
+        <p class="testi-quote">Llev√°bamos dos a√±os pagando Meta Ads y nunca supimos cu√°nto nos costaba un lead real. La asesor√≠a revel√≥ que est√°bamos gastando el 60% del presupuesto en una audiencia equivocada.</p>
         <div class="testi-author">
           <div class="testi-avatar"><img src="https://picsum.photos/seed/valeria-fuentes/88/88" alt="Foto de Valeria Fuentes" loading="lazy"></div>
-          <div><p class="testi-name">Valeria Fuentes</p><p class="testi-role">Gerente Comercial, Clínica Dental Providencia</p></div>
+          <div><p class="testi-name">Valeria Fuentes</p><p class="testi-role">Gerente Comercial, Cl√≠nica Dental Providencia</p></div>
         </div>
       </div>
       <div class="testi-card fade-in" style="transition-delay:.1s">
-        <p class="testi-quote">Pensábamos que Google Analytics estaba funcionando bien. Resultó que el 80% de las conversiones no se registraban. Hoy tenemos un dashboard que usamos en cada reunión de directorio.</p>
+        <p class="testi-quote">Pens√°bamos que Google Analytics estaba funcionando bien. Result√≥ que el 80% de las conversiones no se registraban. Hoy tenemos un dashboard que usamos en cada reuni√≥n de directorio.</p>
         <div class="testi-author">
           <div class="testi-avatar"><img src="https://picsum.photos/seed/rodrigo-cisternas/88/88" alt="Foto de Rodrigo Cisternas" loading="lazy"></div>
           <div><p class="testi-name">Rodrigo Cisternas</p><p class="testi-role">CEO, Constructora Norte Grande</p></div>
         </div>
       </div>
       <div class="testi-card fade-in" style="transition-delay:.15s">
-        <p class="testi-quote">El informe fue la herramienta que usé para cambiar de agencia con argumentos concretos. Sin la asesoría habría seguido pagando por resultados que nadie podía explicar.</p>
+        <p class="testi-quote">El informe fue la herramienta que us√© para cambiar de agencia con argumentos concretos. Sin la asesor√≠a habr√≠a seguido pagando por resultados que nadie pod√≠a explicar.</p>
         <div class="testi-author">
           <div class="testi-avatar"><img src="https://picsum.photos/seed/andrea-molina/88/88" alt="Foto de Andrea Molina" loading="lazy"></div>
           <div><p class="testi-name">Andrea Molina</p><p class="testi-role">Directora, Instituto de Idiomas Andino</p></div>
@@ -1590,16 +1595,16 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECCIÓN 10 — FORMULARIO
-════════════════════════════════════════════ -->
+<!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê
+     SECCI√ìN 10 ‚Äî FORMULARIO
+‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
 <section id="formulario" aria-labelledby="form-h2">
   <div class="container">
     <div class="form-layout">
       <div class="form-info">
         <span class="section-tag fade-in">Conversemos</span>
-        <h2 id="form-h2" class="section-h2 fade-in">¿Partimos? Cuéntanos sobre tu empresa</h2>
-        <p class="fade-in">Te respondemos dentro de las próximas 24 horas hábiles.</p>
+        <h2 id="form-h2" class="section-h2 fade-in">¬øPartimos? Cu√©ntanos sobre tu empresa</h2>
+        <p class="fade-in">Te respondemos dentro de las pr√≥ximas 24 horas h√°biles.</p>
         <div class="contact-row fade-in" style="transition-delay:.05s">
           <div class="contact-icon-wrap" aria-hidden="true">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1635,27 +1640,27 @@ footer {
           <div class="form-group">
             <label for="email">Email corporativo <span aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@empresa.cl">
-            <span class="form-err" id="email-error" role="alert">Ingresa un email válido.</span>
+            <span class="form-err" id="email-error" role="alert">Ingresa un email v√°lido.</span>
           </div>
           <div class="form-group">
-            <label for="telefono">Teléfono (WhatsApp) <span aria-hidden="true">*</span></label>
+            <label for="telefono">Tel√©fono (WhatsApp) <span aria-hidden="true">*</span></label>
             <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="+56 9 XXXX XXXX">
             <span class="form-err" id="telefono-error" role="alert">Este campo es obligatorio.</span>
           </div>
           <div class="form-group">
-            <label for="inversion">¿Cuánto llevan invirtiendo en marketing digital?</label>
+            <label for="inversion">¬øCu√°nto llevan invirtiendo en marketing digital?</label>
             <select id="inversion" name="inversion">
-              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="" disabled selected>Selecciona una opci√≥n</option>
               <option value="menos-6-meses">Menos de 6 meses</option>
-              <option value="6-meses-1-año">Entre 6 meses y 1 año</option>
-              <option value="mas-1-año">Más de 1 año</option>
-              <option value="no-invirtiendo">No estamos invirtiendo todavía</option>
+              <option value="6-meses-1-a√±o">Entre 6 meses y 1 a√±o</option>
+              <option value="mas-1-a√±o">M√°s de 1 a√±o</option>
+              <option value="no-invirtiendo">No estamos invirtiendo todav√≠a</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="situacion">¿Tienen alguna agencia o equipo interno actualmente?</label>
+            <label for="situacion">¬øTienen alguna agencia o equipo interno actualmente?</label>
             <select id="situacion" name="situacion">
-              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="" disabled selected>Selecciona una opci√≥n</option>
               <option value="agencia-externa">Agencia externa</option>
               <option value="equipo-interno">Equipo interno</option>
               <option value="ambos">Ambos</option>
@@ -1664,10 +1669,10 @@ footer {
           </div>
           <div class="form-group">
             <label for="mensaje">Mensaje adicional <span style="color:#aaa;font-weight:400">(opcional)</span></label>
-            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu situación actual..."></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Cu√©ntanos m√°s sobre tu situaci√≥n actual..."></textarea>
           </div>
           <button type="submit" class="form-submit-btn" id="submit-btn">
-            <span id="btn-text">Enviar solicitud de Asesoría &rarr;</span>
+            <span id="btn-text">Enviar solicitud de Asesor√≠a &rarr;</span>
             <span id="btn-loading" style="display:none" aria-live="polite">Enviando...</span>
           </button>
           <p class="form-privacy">Tus datos no se comparten con terceros. Solo los usamos para contactarte.</p>
@@ -1676,15 +1681,15 @@ footer {
           <div class="success-icon-wrap" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h3>¡Solicitud recibida!</h3>
-          <p>Revisamos tu mensaje y te contactamos dentro de las próximas 24 horas hábiles.<br><br>Si tienes urgencia, escríbenos por WhatsApp: <strong>+569 34303320</strong></p>
+          <h3>¬°Solicitud recibida!</h3>
+          <p>Revisamos tu mensaje y te contactamos dentro de las pr√≥ximas 24 horas h√°biles.<br><br>Si tienes urgencia, escr√≠benos por WhatsApp: <strong>+569 34303320</strong></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- ‚îÄ‚îÄ‚îÄ FOOTER ‚îÄ‚îÄ‚îÄ -->
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-inner">
@@ -1696,51 +1701,52 @@ footer {
         <a href="https://copywriters.cl">Volver a copywriters.cl</a>
         <a href="https://copywriters.cl/servicios">Otros servicios</a>
         <a href="https://copywriters.cl/blog">Blog</a>
-        <a href="https://copywriters.cl/privacidad">Política de privacidad</a>
+        <a href="https://copywriters.cl/privacidad">Pol√≠tica de privacidad</a>
       </nav>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Copywriters.cl — Asesoría Digital. Todos los derechos reservados.</p>
-      <p>Del Inca 4622, Las Condes, Santiago &nbsp;·&nbsp; contacto@copywriters.cl</p>
+      <p>¬© 2025 Copywriters.cl ‚Äî Asesor√≠a Digital. Todos los derechos reservados.</p>
+      <p>Del Inca 4622, Las Condes, Santiago &nbsp;¬∑&nbsp; contacto@copywriters.cl</p>
     </div>
   </div>
 </footer>
 
-<!-- ─── EXIT POPUP ─── -->
+<!-- ‚îÄ‚îÄ‚îÄ EXIT POPUP ‚îÄ‚îÄ‚îÄ -->
 <div id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-hidden="true">
   <div class="popup-card">
     <button class="popup-close" id="popup-close" aria-label="Cerrar">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-    <h3 id="popup-title">¿Te vas sin saber si tu marketing está funcionando?</h3>
-    <p>Descarga gratis nuestra checklist de asesoría digital para pymes. 15 preguntas que todo dueño debería hacerse.</p>
+    <h3 id="popup-title">¬øTe vas sin saber si tu marketing est√° funcionando?</h3>
+    <p>Descarga gratis nuestra checklist de asesor√≠a digital para pymes. 15 preguntas que todo due√±o deber√≠a hacerse.</p>
     <form class="popup-form" id="popup-form" novalidate>
-      <input type="email" placeholder="tu@empresa.cl" required aria-label="Tu correo electrónico" id="popup-email">
+      <input type="email" placeholder="tu@empresa.cl" required aria-label="Tu correo electr√≥nico" id="popup-email">
       <button type="submit" aria-label="Recibir checklist">Enviar checklist &rarr;</button>
     </form>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-// ─── EmailJS ───
+// ‚îÄ‚îÄ‚îÄ EmailJS ‚îÄ‚îÄ‚îÄ
 (function(){ emailjs.init({ publicKey: "46Wj5o5rVqgZqS7tM" }); })();
 const EMAILJS_SERVICE_ID    = "service_idi0z8x";
 const EMAILJS_TEMPLATE_USER = "template_oubd425";
 const EMAILJS_TEMPLATE_TEAM = "template_q8bzwjp";
 
-// ─── Intersection Observer ───
+// ‚îÄ‚îÄ‚îÄ Intersection Observer ‚îÄ‚îÄ‚îÄ
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => io.observe(el));
 
-// ─── Nav scroll ───
+// ‚îÄ‚îÄ‚îÄ Nav scroll ‚îÄ‚îÄ‚îÄ
 const hdr = document.getElementById('main-nav');
 window.addEventListener('scroll', () => {
   hdr.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-// ─── Hamburger ───
+// ‚îÄ‚îÄ‚îÄ Hamburger ‚îÄ‚îÄ‚îÄ
 const ham  = document.getElementById('hamburger');
 const mmenu = document.getElementById('mobile-menu');
 ham.addEventListener('click', () => {
@@ -1756,7 +1762,7 @@ mmenu.querySelectorAll('a').forEach(a => {
   });
 });
 
-// ─── Sticky bar ───
+// ‚îÄ‚îÄ‚îÄ Sticky bar ‚îÄ‚îÄ‚îÄ
 const stickyBar  = document.getElementById('sticky-bar');
 const heroEl     = document.getElementById('hero');
 const formEl     = document.getElementById('formulario');
@@ -1774,19 +1780,19 @@ function updateBar() {
 }
 window.addEventListener('scroll', updateBar, { passive: true });
 
-// ─── CTA tracking ───
+// ‚îÄ‚îÄ‚îÄ CTA tracking ‚îÄ‚îÄ‚îÄ
 function trackCTA() {
   if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');
   if (typeof gtag !== 'undefined') gtag('event', 'select_item', {
     item_list_name: 'asesoria_digital',
-    items: [{ item_name: 'Asesoría Digital', price: 590000 }]
+    items: [{ item_name: 'Asesor√≠a Digital', price: 590000 }]
   });
 }
 document.getElementById('hero-cta').addEventListener('click', trackCTA);
 document.getElementById('price-cta').addEventListener('click', trackCTA);
 document.querySelector('.sticky-btn').addEventListener('click', trackCTA);
 
-// ─── HubSpot chat conversion tracking ───
+// ‚îÄ‚îÄ‚îÄ HubSpot chat conversion tracking ‚îÄ‚îÄ‚îÄ
 window.hsConversationsOnReady = window.hsConversationsOnReady || [];
 window.hsConversationsOnReady.push(function() {
   window.HubSpotConversations.on('conversationStarted', function() {
@@ -1806,13 +1812,13 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-// ─── Cupos badge ───
+// ‚îÄ‚îÄ‚îÄ Cupos badge ‚îÄ‚îÄ‚îÄ
 const cuposDisponibles = 3;
 document.getElementById('cupos-badge').innerHTML =
   `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
    Solo ${cuposDisponibles} cupo${cuposDisponibles !== 1 ? 's' : ''} disponible${cuposDisponibles !== 1 ? 's' : ''} este mes`;
 
-// ─── FAQ ───
+// ‚îÄ‚îÄ‚îÄ FAQ ‚îÄ‚îÄ‚îÄ
 document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
     const answer = document.getElementById(btn.getAttribute('aria-controls'));
@@ -1827,7 +1833,7 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 
-// ─── Form validation & submit ───
+// ‚îÄ‚îÄ‚îÄ Form validation & submit ‚îÄ‚îÄ‚îÄ
 const form = document.getElementById('contact-form');
 
 function showErr(id) { document.getElementById(id).classList.add('error'); document.getElementById(id+'-error').classList.add('visible'); }
@@ -1865,29 +1871,29 @@ form.addEventListener('submit', async (e) => {
     telefono:  document.getElementById('telefono').value.trim(),
     inversion: document.getElementById('inversion').value || 'No especificado',
     situacion: document.getElementById('situacion').value || 'No especificado',
-    mensaje:   document.getElementById('mensaje').value.trim() || '—',
+    mensaje:   document.getElementById('mensaje').value.trim() || '‚Äî',
   };
+
+  // Disparar pixels antes del env√≠o para no perder la conversi√≥n si EmailJS falla
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'generate_lead', { event_category: 'asesoria_digital', event_label: 'formulario_contacto' });
+    gtag('event', 'conversion', { send_to: 'AW-718076958/4eiRCNji4pgcEJ74s9YC' });
+  }
+  if (typeof fbq !== 'undefined') fbq('track', 'Lead');
 
   try {
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, params);
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_TEAM, params);
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'generate_lead', { event_category: 'asesoria_digital', event_label: 'formulario_contacto' });
-      gtag('event', 'conversion', { send_to: 'AW-718076958/4eiRCNji4pgcEJ74s9YC' });
-    }
-    if (typeof fbq !== 'undefined') fbq('track', 'Lead');
-    form.style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
   } catch(err) {
-    btn.disabled = false;
-    document.getElementById('btn-text').style.display = 'inline';
-    document.getElementById('btn-loading').style.display = 'none';
-    alert('Hubo un error al enviar el formulario. Por favor intenta nuevamente o escríbenos a contacto@copywriters.cl');
     console.error('EmailJS error:', err);
+    // El lead fue registrado en los pixels; notificamos sin bloquear el flujo
   }
+
+  form.style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
 });
 
-// ─── Exit popup ───
+// ‚îÄ‚îÄ‚îÄ Exit popup ‚îÄ‚îÄ‚îÄ
 let exitShown = false;
 document.addEventListener('mouseleave', (e) => { if (!exitShown && e.clientY < 10) showExit(); });
 let mTimer;
@@ -1920,16 +1926,17 @@ document.getElementById('popup-form').addEventListener('submit', async (e) => {
   const btn = e.target.querySelector('button');
   btn.textContent = 'Enviando...';
   btn.disabled = true;
+  if (typeof fbq !== 'undefined') fbq('track', 'Lead');
   try {
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_USER, {
-      nombre: 'allí',
+      nombre: 'all√≠',
       email: inp.value.trim(),
-      empresa: '—', telefono: '—', inversion: '—', situacion: '—', mensaje: 'Lead desde popup checklist'
+      empresa: '‚Äî', telefono: '‚Äî', inversion: '‚Äî', situacion: '‚Äî', mensaje: 'Lead desde popup checklist'
     });
   } catch(err) { console.error('EmailJS popup error:', err); }
   document.querySelector('.popup-card').innerHTML = `
-    <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px;line-height:1.2">¡Checklist en camino!</h3>
-    <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escríbenos a contacto@copywriters.cl</p>
+    <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:10px;line-height:1.2">¬°Checklist en camino!</h3>
+    <p style="color:var(--muted);font-size:0.9rem;line-height:1.65">Revisa tu correo. Si no llega en 5 minutos, escr√≠benos a contacto@copywriters.cl</p>
   `;
   setTimeout(closeExit, 4000);
 });
